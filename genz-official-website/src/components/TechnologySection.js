@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
+import Technologies from "../assets/technologies.png";
 
 export const TechnologySection = () => {
   return (
@@ -23,8 +24,6 @@ export const TechnologySection = () => {
           <span
             style={{
               color: "#00FFFF",
-              fontWeight: 700,
-              fontSize: "32px",
             }}
           >
             In{" "}
@@ -33,8 +32,6 @@ export const TechnologySection = () => {
           <span
             style={{
               color: "#00FFFF",
-              fontWeight: 700,
-              fontSize: "32px",
             }}
           >
             Technologies
@@ -47,6 +44,7 @@ export const TechnologySection = () => {
             fontSize: "16px",
             textAlign: "center",
             lineHeight: "20px",
+            paddingBottom: "40px",
           }}
         >
           Our expertise in the latest technologies allows us to deliver
@@ -58,10 +56,17 @@ export const TechnologySection = () => {
           sx={{
             backgroundColor: "#272626",
             borderRadius: "16px",
-            height: "400px",
-            width: "640px",
+            height: "450px",
+            width: "800px",
           }}
-        ></Box>
+        >
+          <img
+            src={Technologies}
+            alt="technogies we use"
+            height="450px"
+            width="800px"
+          />
+        </Box>
       </Stack>
     </Box>
   );
