@@ -36,7 +36,7 @@ const cardDetails = [
   },
 ];
 
-export const ServicesSection = () => {
+const ServicesSection = () => {
   return (
     <div id="services-section">
       <Box
@@ -162,3 +162,5 @@ export const ServicesSection = () => {
     </div>
   );
 };
+
+export default ServicesSection;

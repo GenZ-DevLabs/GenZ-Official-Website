@@ -1,7 +1,8 @@
 import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
-export const LetsTalkSection = () => {
+const LetsTalkSection = () => {
   return (
     <div id="contactus-section">
       <Box
@@ -56,27 +57,29 @@ export const LetsTalkSection = () => {
             we're here to help.
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Button
-              variant="contained"
-              disableRipple
-              sx={{
-                width: "200px",
-                height: "40px",
-                fontSize: "20px",
-                fontWeight: 500,
-                color: "#000000",
-                borderRadius: "50px",
-                backgroundColor: "#00FFFF",
-                verticalAlign: "center",
-                transitionDuration: "0.5s",
-                textTransform: "lowercase",
-                "&:hover": {
-                  backgroundColor: "#59FFFF",
-                },
-              }}
-            >
-              hello@genz.com
-            </Button>
+            <Link to="/contactus">
+              <Button
+                variant="contained"
+                disableRipple
+                sx={{
+                  width: "200px",
+                  height: "40px",
+                  fontSize: "20px",
+                  fontWeight: 500,
+                  color: "#000000",
+                  borderRadius: "50px",
+                  backgroundColor: "#00FFFF",
+                  verticalAlign: "center",
+                  transitionDuration: "0.5s",
+                  textTransform: "lowercase",
+                  "&:hover": {
+                    backgroundColor: "#59FFFF",
+                  },
+                }}
+              >
+                hello@genz.com
+              </Button>
+            </Link>
             <Button
               disableRipple
               sx={{
@@ -104,3 +107,5 @@ export const LetsTalkSection = () => {
     </div>
   );
 };
+
+export default LetsTalkSection;

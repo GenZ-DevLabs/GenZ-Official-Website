@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { AppBar, Box, Button, IconButton, Stack, Toolbar } from "@mui/material";
 import Logo from "../assets/genzLogo.png";
+import { Link } from "react-router-dom";
 
-const pages = ["Home", "Services", "Projects", "About"];
+// const pages = ["Home", "About", "Services"];
 
 export const Header = () => {
   const headerRef = useRef(null);
@@ -44,19 +45,25 @@ export const Header = () => {
   return (
     <AppBar sx={{ backgroundColor: "#0F0E0E", maxHeight: "66px" }}>
       <Toolbar>
-        <IconButton disableRipple sx={{ p: 0 }}>
-          <Box
-            component="img"
-            margin="0"
-            sx={{
-              marginLeft: "80px",
-              height: "60px",
-              width: "60px",
-            }}
-            alt="genz logo"
-            src={Logo}
-          />
-        </IconButton>
+        <Link to="/">
+          <IconButton
+            onClick={handleClickNavItem("home")}
+            disableRipple
+            sx={{ p: 0 }}
+          >
+            <Box
+              component="img"
+              margin="0"
+              sx={{
+                marginLeft: "80px",
+                height: "60px",
+                width: "60px",
+              }}
+              alt="genz logo"
+              src={Logo}
+            />
+          </IconButton>
+        </Link>
 
         {/* For md */}
         <Stack
@@ -68,7 +75,61 @@ export const Header = () => {
             display: { xs: "none", md: "flex", marginRight: "100px" },
           }}
         >
-          {pages.map((page) => (
+          <Link to="/">
+            <Button
+              onClick={handleClickNavItem("home")}
+              disableRipple
+              sx={{
+                fontSize: "16px",
+                color: "#FFFFFF",
+                backgroundColor: "#0F0E0E",
+                verticalAlign: "center",
+                transitionDuration: "0.3s",
+                textTransform: "inherit",
+                "&:hover": {
+                  color: "#00FFFF",
+                },
+              }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link to="/about">
+            <Button
+              disableRipple
+              sx={{
+                fontSize: "16px",
+                color: "#FFFFFF",
+                backgroundColor: "#0F0E0E",
+                verticalAlign: "center",
+                transitionDuration: "0.3s",
+                textTransform: "inherit",
+                "&:hover": {
+                  color: "#00FFFF",
+                },
+              }}
+            >
+              About
+            </Button>
+          </Link>
+          <Button
+            onClick={handleClickNavItem("services")}
+            disableRipple
+            sx={{
+              fontSize: "16px",
+              color: "#FFFFFF",
+              backgroundColor: "#0F0E0E",
+              verticalAlign: "center",
+              transitionDuration: "0.3s",
+              textTransform: "inherit",
+              "&:hover": {
+                color: "#00FFFF",
+              },
+            }}
+          >
+            Services
+          </Button>
+          {/* {pages.map((page) => (
             <Button
               key={page}
               onClick={handleClickNavItem(page)}
@@ -86,8 +147,8 @@ export const Header = () => {
               }}
             >
               {page}
-            </Button>
-          ))}
+            </Button> 
+          ))}*/}
           <Button
             variant="contained"
             onClick={handleClickNavItem("contactus")}

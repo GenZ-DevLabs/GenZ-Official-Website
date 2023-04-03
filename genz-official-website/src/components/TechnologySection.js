@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Technologies from "../assets/technologies.png";
 
-export const TechnologySection = () => {
+const TechnologySection = () => {
   return (
     <Box
       minHeight="100vh"
@@ -71,3 +71,5 @@ export const TechnologySection = () => {
     </Box>
   );
 };
+
+export default TechnologySection;

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 
-export const LandingSection = () => {
+const LandingSection = () => {
   return (
     <div id="home-section">
       <Box
@@ -117,3 +117,5 @@ export const LandingSection = () => {
     </div>
   );
 };
+
+export default LandingSection;
