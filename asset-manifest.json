@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d2ae3f0.css",
-    "main.js": "/static/js/main.b960b1e2.js",
+    "main.css": "/static/css/main.ff07a5f0.css",
+    "main.js": "/static/js/main.411548a5.js",
     "static/js/787.08a5e763.chunk.js": "/static/js/787.08a5e763.chunk.js",
     "static/media/technologies.png": "/static/media/technologies.67e099dc4c6393419a4e.png",
+    "static/media/genzFooterLogo.png": "/static/media/genzFooterLogo.16c7f57b83b6843fc638.png",
     "static/media/genzLogo.png": "/static/media/genzLogo.e7c419c638c1d2098500.png",
     "static/media/brush.png": "/static/media/brush.5da3a1aa927e98ad3f8e.png",
     "static/media/code.png": "/static/media/code.38e72a30312aa37a14ae.png",
     "static/media/phone.png": "/static/media/phone.42eadc792251f65f5df7.png",
     "index.html": "/index.html",
-    "main.4d2ae3f0.css.map": "/static/css/main.4d2ae3f0.css.map",
-    "main.b960b1e2.js.map": "/static/js/main.b960b1e2.js.map",
+    "main.ff07a5f0.css.map": "/static/css/main.ff07a5f0.css.map",
+    "main.411548a5.js.map": "/static/js/main.411548a5.js.map",
     "787.08a5e763.chunk.js.map": "/static/js/787.08a5e763.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d2ae3f0.css",
-    "static/js/main.b960b1e2.js"
+    "static/css/main.ff07a5f0.css",
+    "static/js/main.411548a5.js"
   ]
 }
