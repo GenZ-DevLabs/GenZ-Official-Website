@@ -5,6 +5,7 @@ import { ContactUs } from "./pages/ContactUs";
 import { Header } from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import { About } from "./pages/About";
+import { Footer } from "./components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        < Footer />
         {/* <Footer /> */}
       </div>
     </ThemeProvider>
