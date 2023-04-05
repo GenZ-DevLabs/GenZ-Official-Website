@@ -1,11 +1,13 @@
 import React from "react";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Stack, Typography, Grid } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 
 const LandingSection = () => {
   return (
-    <div id="home-section">
-      <Box
+    <section id="landing">
+      <Grid
+        container
+        spacing={2}
         paddingLeft="100px"
         minHeight="100vh"
         display="flex"
@@ -13,61 +15,62 @@ const LandingSection = () => {
         justifyContent="left"
         sx={{ backgroundColor: "#121212" }}
       >
-        <Stack direction="column" spacing={2}>
-          <Stack>
-            <Typography
-              sx={{
-                color: "#FFFFFF",
-                fontWeight: 600,
-                fontSize: "70px",
-              }}
-            >
-              Innovating for{" "}
-              <span
-                style={{
-                  color: "#00FFFF",
+        <Grid item xs={8} md={12}>
+          <Stack spacing={2}>
+            <Stack>
+              <Typography
+                sx={{
+                  color: "#FFFFFF",
+                  fontWeight: 600,
+                  fontSize: "70px",
                 }}
               >
-                GenZ
-              </span>
-              's
-              <br />
-              <span
-                style={{
-                  color: "#00FFFF",
-                }}
+                Innovating for{" "}
+                <span
+                  style={{
+                    color: "#00FFFF",
+                  }}
+                >
+                  GenZ
+                </span>
+                's
+                <br />
+                <span
+                  style={{
+                    color: "#00FFFF",
+                  }}
+                >
+                  Digital{" "}
+                </span>
+                Future
+              </Typography>
+            </Stack>
+            <Stack>
+              <Typography
+                sx={{ fontSize: "20px", fontWeight: 400, color: "#FFFFFF" }}
               >
-                Digital{" "}
-              </span>
-              Future
-            </Typography>
-          </Stack>
-          <Stack>
-            <Typography
-              sx={{ fontSize: "20px", fontWeight: 400, color: "#FFFFFF" }}
-            >
-              We are team of talented engineers,
-            </Typography>
-            <Typography
-              sx={{ fontSize: "24px", fontWeight: 600, color: "#FFFFFF" }}
-            >
-              And we are experts in{" "}
-              <span style={{ color: "#00FFFF" }}>
-                <TypeAnimation
-                  sequence={[
-                    "Web Applications",
-                    3000,
-                    "Mobile Applications",
-                    3000,
-                    "UI/UX Designing",
-                    3000,
-                  ]}
-                  repeat={Infinity}
-                />
-              </span>
-            </Typography>
-          </Stack>
-          <Stack direction="row" spacing={2}>
+                We are team of talented engineers,
+              </Typography>
+              <Typography
+                sx={{ fontSize: "24px", fontWeight: 600, color: "#FFFFFF" }}
+              >
+                And we are experts in{" "}
+                <span style={{ color: "#00FFFF" }}>
+                  <TypeAnimation
+                    sequence={[
+                      "Web Applications",
+                      3000,
+                      "Mobile Applications",
+                      3000,
+                      "UI/UX Designing",
+                      3000,
+                    ]}
+                    repeat={Infinity}
+                  />
+                </span>
+              </Typography>
+            </Stack>
+            {/* <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
               disableRipple
@@ -111,10 +114,11 @@ const LandingSection = () => {
             >
               Let's Talk
             </Button>
+          </Stack> */}
           </Stack>
-        </Stack>
-      </Box>
-    </div>
+        </Grid>
+      </Grid>
+    </section>
   );
 };
 

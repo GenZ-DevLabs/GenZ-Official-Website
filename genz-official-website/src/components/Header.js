@@ -1,9 +1,28 @@
 import React, { useEffect, useRef } from "react";
-import { AppBar, Box, Button, IconButton, Stack, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Stack,
+  Toolbar,
+  styled,
+} from "@mui/material";
 import Logo from "../assets/genzLogo.png";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-// const pages = ["Home", "About", "Services"];
+const StyledButton = styled(Button)({
+  fontSize: "16px",
+  color: "#FFFFFF",
+  backgroundColor: "#0F0E0E",
+  verticalAlign: "center",
+  transitionDuration: "0.3s",
+  textTransform: "inherit",
+  "&:hover": {
+    color: "#00FFFF",
+    backgroundColor: "#0F0E0E",
+  },
+});
 
 export const Header = () => {
   const headerRef = useRef(null);
@@ -31,26 +50,11 @@ export const Header = () => {
     };
   }, []);
 
-  const handleClickNavItem = (page) => () => {
-    const id = `${page.toLowerCase()}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
   return (
     <AppBar sx={{ backgroundColor: "#0F0E0E", maxHeight: "66px" }}>
       <Toolbar>
-        <Link to="/">
-          <IconButton
-            onClick={handleClickNavItem("home")}
-            disableRipple
-            sx={{ p: 0 }}
-          >
+        <HashLink to="/#home">
+          <IconButton disableRipple sx={{ p: 0 }}>
             <Box
               component="img"
               margin="0"
@@ -63,9 +67,8 @@ export const Header = () => {
               src={Logo}
             />
           </IconButton>
-        </Link>
+        </HashLink>
 
-        {/* For md */}
         <Stack
           justifyContent="flex-end"
           direction="row"
@@ -75,104 +78,40 @@ export const Header = () => {
             display: { xs: "none", md: "flex", marginRight: "100px" },
           }}
         >
-          <Link to="/">
+          <HashLink smooth to="/#landing" style={{ textDecoration: "none" }}>
+            <StyledButton disableRipple>Home</StyledButton>
+          </HashLink>
+          <HashLink to="/about" style={{ textDecoration: "none" }}>
+            <StyledButton disableRipple>About</StyledButton>
+          </HashLink>
+          <HashLink smooth to="/#services" style={{ textDecoration: "none" }}>
+            <StyledButton disableRipple>Services</StyledButton>
+          </HashLink>
+          <HashLink smooth to="/#letstalk" style={{ textDecoration: "none" }}>
             <Button
-              onClick={handleClickNavItem("home")}
+              variant="contained"
               disableRipple
               sx={{
+                width: "128px",
+                height: "40px",
                 fontSize: "16px",
-                color: "#FFFFFF",
-                backgroundColor: "#0F0E0E",
+                fontWeight: 600,
+                color: "#000000",
+                borderRadius: "50px",
+                backgroundColor: "#00FFFF",
                 verticalAlign: "center",
-                transitionDuration: "0.3s",
+                transitionDuration: "0.5s",
                 textTransform: "inherit",
                 "&:hover": {
+                  backgroundColor: "#0F0E0E",
+                  border: "2px solid #00FFFF",
                   color: "#00FFFF",
                 },
               }}
             >
-              Home
+              Let's Talk
             </Button>
-          </Link>
-          <Link to="/about">
-            <Button
-              disableRipple
-              sx={{
-                fontSize: "16px",
-                color: "#FFFFFF",
-                backgroundColor: "#0F0E0E",
-                verticalAlign: "center",
-                transitionDuration: "0.3s",
-                textTransform: "inherit",
-                "&:hover": {
-                  color: "#00FFFF",
-                },
-              }}
-            >
-              About
-            </Button>
-          </Link>
-          <Button
-            onClick={handleClickNavItem("services")}
-            disableRipple
-            sx={{
-              fontSize: "16px",
-              color: "#FFFFFF",
-              backgroundColor: "#0F0E0E",
-              verticalAlign: "center",
-              transitionDuration: "0.3s",
-              textTransform: "inherit",
-              "&:hover": {
-                color: "#00FFFF",
-              },
-            }}
-          >
-            Services
-          </Button>
-          {/* {pages.map((page) => (
-            <Button
-              key={page}
-              onClick={handleClickNavItem(page)}
-              disableRipple
-              sx={{
-                fontSize: "16px",
-                color: "#FFFFFF",
-                backgroundColor: "#0F0E0E",
-                verticalAlign: "center",
-                transitionDuration: "0.3s",
-                textTransform: "inherit",
-                "&:hover": {
-                  color: "#00FFFF",
-                },
-              }}
-            >
-              {page}
-            </Button> 
-          ))}*/}
-          <Button
-            variant="contained"
-            onClick={handleClickNavItem("contactus")}
-            disableRipple
-            sx={{
-              width: "128px",
-              height: "40px",
-              fontSize: "16px",
-              fontWeight: 600,
-              color: "#000000",
-              borderRadius: "50px",
-              backgroundColor: "#00FFFF",
-              verticalAlign: "center",
-              transitionDuration: "0.5s",
-              textTransform: "inherit",
-              "&:hover": {
-                backgroundColor: "#0F0E0E",
-                border: "2px solid #00FFFF",
-                color: "#00FFFF",
-              },
-            }}
-          >
-            Let's Talk
-          </Button>
+          </HashLink>
         </Stack>
       </Toolbar>
     </AppBar>

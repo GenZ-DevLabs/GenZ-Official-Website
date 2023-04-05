@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const LetsTalkSection = () => {
   return (
-    <div id="contactus-section">
+    <section id="letstalk">
       <Box
         paddingLeft="100px"
         minHeight="100vh"
@@ -57,12 +57,15 @@ const LetsTalkSection = () => {
             we're here to help.
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Link to="/contactus">
+            <HashLink
+              to="contactus/#contactus"
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 variant="contained"
                 disableRipple
                 sx={{
-                  width: "200px",
+                  width: "248px",
                   height: "40px",
                   fontSize: "20px",
                   fontWeight: 500,
@@ -77,9 +80,9 @@ const LetsTalkSection = () => {
                   },
                 }}
               >
-                hello@genz.com
+                hello@genzdevlabs.com
               </Button>
-            </Link>
+            </HashLink>
             <Button
               disableRipple
               sx={{
@@ -104,7 +107,7 @@ const LetsTalkSection = () => {
           </Stack>
         </Stack>
       </Box>
-    </div>
+    </section>
   );
 };
 

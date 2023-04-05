@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Paper, Grid, Stack, Typography } from "@mui/material";
 import Technologies from "../assets/technologies.png";
 
 const TechnologySection = () => {
   return (
-    <Box
+    <Grid
+      container
       minHeight="100vh"
       display="flex"
       alignItems="center"
@@ -52,7 +53,8 @@ const TechnologySection = () => {
           <br />
           that meet your unique needs and requirements.
         </Typography>
-        <Box
+        <Paper
+          elevation={3}
           sx={{
             backgroundColor: "#272626",
             borderRadius: "16px",
@@ -66,9 +68,9 @@ const TechnologySection = () => {
             height="450px"
             width="800px"
           />
-        </Box>
+        </Paper>
       </Stack>
-    </Box>
+    </Grid>
   );
 };
 

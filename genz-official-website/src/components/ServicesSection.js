@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Box,
+  Grid,
   Stack,
   Card,
   CardContent,
@@ -38,15 +38,16 @@ const cardDetails = [
 
 const ServicesSection = () => {
   return (
-    <div id="services-section">
-      <Box
+    <section id="services">
+      <Grid
+        container
         minHeight="100vh"
         display="flex"
         alignItems="center"
         justifyContent="center"
         sx={{ backgroundColor: "#171616" }}
       >
-        <Stack direction="column" spacing={2}>
+        <Stack spacing={2}>
           <Typography
             sx={{
               color: "#FFFFFF",
@@ -158,8 +159,8 @@ const ServicesSection = () => {
             ))}
           </Stack>
         </Stack>
-      </Box>
-    </div>
+      </Grid>
+    </section>
   );
 };
 
