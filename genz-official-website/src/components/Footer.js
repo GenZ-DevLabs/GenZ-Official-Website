@@ -3,7 +3,6 @@ import { Grid, Box, IconButton, Typography } from "@mui/material";
 import Logo from "../assets/genzFooterLogo.png";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { color } from "@mui/system";
 
 export const Footer = () => {
   const handleClickNavItem = (page) => () => {
