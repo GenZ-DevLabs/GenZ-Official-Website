@@ -16,7 +16,7 @@ const TechnologySection = () => {
         <Typography
           sx={{
             color: "#FFFFFF",
-            fontWeight: 700,
+            fontWeight: "700",
             fontSize: "32px",
             textAlign: "center",
           }}
@@ -41,7 +41,7 @@ const TechnologySection = () => {
         <Typography
           sx={{
             color: "#FFFFFF",
-            fontWeight: 400,
+            fontWeight: "400",
             fontSize: "16px",
             textAlign: "center",
             lineHeight: "20px",

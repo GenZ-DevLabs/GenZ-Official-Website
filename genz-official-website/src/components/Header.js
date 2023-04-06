@@ -53,7 +53,7 @@ export const Header = () => {
   return (
     <AppBar sx={{ backgroundColor: "#0F0E0E", maxHeight: "66px" }}>
       <Toolbar>
-        <HashLink to="/#home">
+        <HashLink to="/#landing">
           <IconButton disableRipple sx={{ p: 0 }}>
             <Box
               component="img"
@@ -78,16 +78,16 @@ export const Header = () => {
             display: { xs: "none", md: "flex", marginRight: "100px" },
           }}
         >
-          <HashLink smooth to="/#landing" style={{ textDecoration: "none" }}>
+          <HashLink smooth to="/#landing">
             <StyledButton disableRipple>Home</StyledButton>
           </HashLink>
-          <HashLink to="/about" style={{ textDecoration: "none" }}>
+          <HashLink smooth to="/about">
             <StyledButton disableRipple>About</StyledButton>
           </HashLink>
-          <HashLink smooth to="/#services" style={{ textDecoration: "none" }}>
+          <HashLink smooth to="/#services">
             <StyledButton disableRipple>Services</StyledButton>
           </HashLink>
-          <HashLink smooth to="/#letstalk" style={{ textDecoration: "none" }}>
+          <HashLink smooth to="/#letstalk">
             <Button
               variant="contained"
               disableRipple
@@ -95,7 +95,7 @@ export const Header = () => {
                 width: "128px",
                 height: "40px",
                 fontSize: "16px",
-                fontWeight: 600,
+                fontWeight: "600",
                 color: "#000000",
                 borderRadius: "50px",
                 backgroundColor: "#00FFFF",

@@ -2,13 +2,13 @@ import React from "react";
 import {
   Grid,
   Stack,
-  Card,
   CardContent,
   CardActions,
   Typography,
   Button,
   Avatar,
   CardMedia,
+  Card,
 } from "@mui/material";
 
 import Code from "../assets/code.png";
@@ -51,7 +51,7 @@ const ServicesSection = () => {
           <Typography
             sx={{
               color: "#FFFFFF",
-              fontWeight: 700,
+              fontWeight: "700",
               fontSize: "32px",
               textAlign: "center",
             }}
@@ -68,7 +68,7 @@ const ServicesSection = () => {
           <Typography
             sx={{
               color: "#FFFFFF",
-              fontWeight: 400,
+              fontWeight: "400",
               fontSize: "16px",
               textAlign: "center",
               lineHeight: "20px",
@@ -90,11 +90,13 @@ const ServicesSection = () => {
             {cardDetails.map((card, index) => (
               <Card
                 key={index}
+                elevation="3"
                 sx={{
                   height: "360px",
                   width: "300px",
                   borderRadius: "16px",
                   backgroundColor: "#1E1D1D",
+                  "&:hover": { cursor: "pointer" },
                 }}
               >
                 <CardMedia
@@ -110,7 +112,7 @@ const ServicesSection = () => {
                   <Typography
                     sx={{
                       marginTop: "4px",
-                      fontWeight: 700,
+                      fontWeight: "700",
                       fontSize: "20px",
                       lineHeight: "24px",
                       textAlign: "center",
@@ -122,7 +124,7 @@ const ServicesSection = () => {
                   <Typography
                     sx={{
                       marginTop: "24px",
-                      fontWeight: 400,
+                      fontWeight: "400",
                       fontSize: "16px",
                       color: "#FFFFFF",
                       textAlign: "center",
@@ -141,7 +143,7 @@ const ServicesSection = () => {
                       height: "32px",
                       fontSize: "16px",
                       color: "#1E1E1E",
-                      fontWeight: 600,
+                      fontWeight: "600",
                       borderRadius: "50px",
                       backgroundColor: "#00FFFF",
                       verticalAlign: "center",

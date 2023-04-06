@@ -1,9 +1,9 @@
 import React from "react";
-
+import AboutLandingSection from "../components/AboutLandingSection";
 export const About = () => {
   return (
-    <div>
-      <h1>This is About</h1>
-    </div>
+    <>
+      <AboutLandingSection />
+    </>
   );
 };

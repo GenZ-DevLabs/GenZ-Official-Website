@@ -17,7 +17,7 @@ const LetsTalkSection = () => {
           <Typography
             sx={{
               color: "#FFFFFF",
-              fontWeight: 700,
+              fontWeight: "700",
               fontSize: "40px",
             }}
           >
@@ -43,7 +43,7 @@ const LetsTalkSection = () => {
           <Typography
             sx={{
               color: "#FFFFFF",
-              fontWeight: 400,
+              fontWeight: "400",
               fontSize: "16px",
               paddingBottom: "40px",
             }}
@@ -57,10 +57,7 @@ const LetsTalkSection = () => {
             we're here to help.
           </Typography>
           <Stack direction="row" spacing={2}>
-            <HashLink
-              to="contactus/#contactus"
-              style={{ textDecoration: "none" }}
-            >
+            <HashLink smooth to="contactus/#contactus">
               <Button
                 variant="contained"
                 disableRipple
@@ -68,7 +65,7 @@ const LetsTalkSection = () => {
                   width: "248px",
                   height: "40px",
                   fontSize: "20px",
-                  fontWeight: 500,
+                  fontWeight: "500",
                   color: "#000000",
                   borderRadius: "50px",
                   backgroundColor: "#00FFFF",
@@ -89,7 +86,7 @@ const LetsTalkSection = () => {
                 width: "192px",
                 height: "40px",
                 fontSize: "20px",
-                fontWeight: 600,
+                fontWeight: "600",
                 backgroundColor: "#121212",
                 border: "2px solid #00FFFF",
                 color: "#00FFFF",

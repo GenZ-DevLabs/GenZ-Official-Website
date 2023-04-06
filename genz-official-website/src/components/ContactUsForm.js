@@ -81,7 +81,7 @@ const ContactUsForm = () => {
               width: "168px",
               height: "36px",
               fontSize: "20px",
-              fontWeight: 500,
+              fontWeight: "500",
               color: "#1E1E1E",
               borderRadius: "50px",
               backgroundColor: "#00FFFF",
