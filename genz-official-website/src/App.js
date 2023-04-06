@@ -53,8 +53,7 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        < Footer />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </ThemeProvider>
   );
