@@ -51,7 +51,12 @@ export const Header = () => {
   }, []);
 
   return (
-    <AppBar sx={{ backgroundColor: "#0F0E0E", maxHeight: "66px" }}>
+    <AppBar
+      sx={{
+        backgroundColor: "#0F0E0E",
+        maxHeight: "66px",
+      }}
+    >
       <Toolbar>
         <HashLink to="/#landing">
           <IconButton disableRipple sx={{ p: 0 }}>
@@ -59,7 +64,7 @@ export const Header = () => {
               component="img"
               margin="0"
               sx={{
-                marginLeft: "80px",
+                marginLeft: { xs: "0px", md: "80px" },
                 height: "60px",
                 width: "60px",
               }}
@@ -72,29 +77,45 @@ export const Header = () => {
         <Stack
           justifyContent="flex-end"
           direction="row"
-          spacing={4}
+          spacing={{ xs: 0, sm: 1, md: 4 }}
           sx={{
             flexGrow: 1,
-            display: { xs: "none", md: "flex", marginRight: "100px" },
+            display: { md: "flex" },
           }}
         >
           <HashLink smooth to="/#landing">
-            <StyledButton disableRipple>Home</StyledButton>
+            <StyledButton
+              disableRipple
+              sx={{ fontSize: { xs: "14px", sm: "16px" } }}
+            >
+              Home
+            </StyledButton>
           </HashLink>
           <HashLink smooth to="/about">
-            <StyledButton disableRipple>About</StyledButton>
+            <StyledButton
+              disableRipple
+              sx={{ fontSize: { xs: "14px", sm: "16px" } }}
+            >
+              About
+            </StyledButton>
           </HashLink>
           <HashLink smooth to="/#services">
-            <StyledButton disableRipple>Services</StyledButton>
+            <StyledButton
+              disableRipple
+              sx={{ fontSize: { xs: "14px", sm: "16px" } }}
+            >
+              Services
+            </StyledButton>
           </HashLink>
           <HashLink smooth to="/#letstalk">
             <Button
               variant="contained"
               disableRipple
               sx={{
-                width: "128px",
-                height: "40px",
-                fontSize: "16px",
+                width: { xs: "80px", sm: "90px", md: "128px" },
+                height: { xs: "30px", md: "40px" },
+                fontSize: { xs: "11px", sm: "14px", md: "16px" },
+                marginTop: { xs: "5px", sm: "5px", md: "0px" },
                 fontWeight: "600",
                 color: "#000000",
                 borderRadius: "50px",

@@ -23,17 +23,17 @@ export const Footer = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          paddingBottom: { xs: "20px", md: "0px" },
         }}
       >
         <Grid container display="flex">
-          <Grid item sm={12} md={12} lg={6}>
+          <Grid item sm={12} md={12} lg={6} textAlign={"center"}>
             <HashLink to="/#landing">
               <IconButton>
                 <Box
                   component="img"
                   margin="0"
                   sx={{
-                    marginLeft: "80px",
                     marginTop: "10px",
                     height: "180px",
                     width: "180px",
@@ -45,11 +45,11 @@ export const Footer = () => {
             </HashLink>
             <Typography
               sx={{
-                marginLeft: "100px",
-                marginRight: "100px",
+                marginLeft: { xs: "50px", md: "150px" },
+                marginRight: { xs: "50px", md: "150px" },
                 color: "#FFFFFF",
-                fontSize: "14px",
-                marginBottom: "40px",
+                fontSize: "13px",
+                marginBottom: { xs: "0px", md: "30px" },
               }}
             >
               At GenZ, we're harnessing the power of cutting-edge technology to
@@ -57,20 +57,46 @@ export const Footer = () => {
               empower the next generations of digital natives.
             </Typography>
           </Grid>
-          <Grid item xm={12} sm={12} md={6} lg={2} sx={{ color: "#FFFFFF" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={4}
+            lg={2}
+            sx={{ color: "#FFFFFF" }}
+            textAlign={"center"}
+          >
             <Typography
               variant="h6"
-              sx={{ marginTop: "60px", color: "#00FFFF" }}
+              sx={{
+                marginTop: { xs: "40px", md: "60px" },
+                color: "#00FFFF",
+                fontSize: { xs: "16px", md: "20px" },
+              }}
             >
               GenZ DevLabs
             </Typography>
 
             <HashLink smooth to="/#landing" style={{ textDecoration: "none" }}>
-              <StyledTypo sx={{ marginTop: "20px" }}>Home</StyledTypo>
+              <StyledTypo
+                sx={{
+                  marginTop: { xs: "10px", md: "20px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
+              >
+                Home
+              </StyledTypo>
             </HashLink>
 
             <HashLink smooth to="/about" style={{ textDecoration: "none" }}>
-              <StyledTypo sx={{ marginTop: "8px" }}>About</StyledTypo>
+              <StyledTypo
+                sx={{
+                  marginTop: { xs: "6px", md: "8px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
+              >
+                About
+              </StyledTypo>
             </HashLink>
 
             <HashLink
@@ -78,42 +104,80 @@ export const Footer = () => {
               to="contactus/#contactus"
               style={{ textDecoration: "none" }}
             >
-              <StyledTypo sx={{ marginTop: "8px" }}>Contact Us</StyledTypo>
+              <StyledTypo
+                sx={{
+                  marginTop: { xs: "6px", md: "8px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
+              >
+                Contact Us
+              </StyledTypo>
             </HashLink>
           </Grid>
-          <Grid item sm={12} md={6} lg={2} sx={{ color: "#FFFFFF" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={4}
+            lg={2}
+            sx={{ color: "#FFFFFF" }}
+            textAlign={"center"}
+          >
             <Typography
               variant="h6"
-              sx={{ marginTop: "60px", color: "#00FFFF" }}
+              sx={{
+                marginTop: { xs: "40px", md: "60px" },
+                color: "#00FFFF",
+                fontSize: { xs: "16px", md: "20px" },
+              }}
             >
               Our Services
             </Typography>
 
             <HashLink smooth to="/#services" style={{ textDecoration: "none" }}>
               <StyledTypo
-                sx={{ marginTop: "20px", "&:hover": { color: "#00FFFF" } }}
+                sx={{
+                  marginTop: { xs: "10px", md: "20px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
               >
                 Web Applications
               </StyledTypo>
 
               <StyledTypo
-                sx={{ marginTop: "8px", "&:hover": { color: "#00FFFF" } }}
+                sx={{
+                  marginTop: { xs: "6px", md: "8px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
               >
                 Mobile Applications
               </StyledTypo>
 
               <StyledTypo
-                sx={{ marginTop: "8px", "&:hover": { color: "#00FFFF" } }}
+                sx={{
+                  marginTop: { xs: "6px", md: "8px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
               >
                 UI/UX Designs
               </StyledTypo>
             </HashLink>
           </Grid>
-
-          <Grid item sm={12} md={6} lg={2} sx={{ color: "#FFFFFF" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={4}
+            lg={2}
+            sx={{ color: "#FFFFFF" }}
+            textAlign={"center"}
+          >
             <Typography
-              variant="h6"
-              sx={{ marginTop: "60px", color: "#00FFFF" }}
+              sx={{
+                marginTop: { xs: "40px", md: "60px" },
+                color: "#00FFFF",
+                fontSize: { xs: "16px", md: "20px" },
+              }}
             >
               Social Media
             </Typography>
@@ -123,7 +187,15 @@ export const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <StyledTypo sx={{ marginTop: "20px" }}> LinkedIn </StyledTypo>
+              <StyledTypo
+                sx={{
+                  marginTop: { xs: "10px", md: "20px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
+              >
+                {" "}
+                LinkedIn{" "}
+              </StyledTypo>
             </a>
             <a
               style={{ textDecoration: "none" }}
@@ -131,7 +203,15 @@ export const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <StyledTypo sx={{ marginTop: "8px" }}> Twitter </StyledTypo>
+              <StyledTypo
+                sx={{
+                  marginTop: { xs: "6px", md: "8px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
+              >
+                {" "}
+                Twitter{" "}
+              </StyledTypo>
             </a>
             <a
               style={{ textDecoration: "none" }}
@@ -139,7 +219,15 @@ export const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <StyledTypo sx={{ marginTop: "8px" }}> Facebook </StyledTypo>
+              <StyledTypo
+                sx={{
+                  marginTop: { xs: "6px", md: "8px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
+              >
+                {" "}
+                Facebook{" "}
+              </StyledTypo>
             </a>
             <a
               style={{ textDecoration: "none" }}
@@ -147,7 +235,15 @@ export const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <StyledTypo sx={{ marginTop: "8px" }}> Instagram </StyledTypo>
+              <StyledTypo
+                sx={{
+                  marginTop: { xs: "6px", md: "8px" },
+                  fontSize: { xs: "13px", md: "14px" },
+                }}
+              >
+                {" "}
+                Instagram{" "}
+              </StyledTypo>
             </a>
           </Grid>
         </Grid>
@@ -166,7 +262,7 @@ export const Footer = () => {
         <Typography
           sx={{
             color: "#FFFFFF",
-            fontSize: "12px",
+            fontSize: { xs: "10px", md: "12px" },
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

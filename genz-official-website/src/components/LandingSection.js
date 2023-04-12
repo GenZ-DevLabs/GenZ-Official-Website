@@ -9,8 +9,8 @@ const LandingSection = () => {
       <Grid
         container
         spacing={2}
-        paddingLeft="100px"
-        minHeight="100vh"
+        paddingLeft={{ xs: "80px", md: "100px" }}
+        minHeight={{ xs: "80vh", md: "100vh" }}
         display="flex"
         alignItems="center"
         justifyContent="left"
@@ -22,7 +22,7 @@ const LandingSection = () => {
               sx={{
                 color: "#FFFFFF",
                 fontWeight: "600",
-                fontSize: "70px",
+                fontSize: { xs: "40px", md: "70px" },
               }}
             >
               Innovating for{" "}
@@ -47,12 +47,20 @@ const LandingSection = () => {
           </Stack>
           <Stack>
             <Typography
-              sx={{ fontSize: "20px", fontWeight: "400", color: "#FFFFFF" }}
+              sx={{
+                fontSize: { xs: "16px", md: "20px" },
+                fontWeight: "400",
+                color: "#FFFFFF",
+              }}
             >
               We are team of talented engineers,
             </Typography>
             <Typography
-              sx={{ fontSize: "24px", fontWeight: "600", color: "#FFFFFF" }}
+              sx={{
+                fontSize: { xs: "20px", md: "24px" },
+                fontWeight: "600",
+                color: "#FFFFFF",
+              }}
             >
               And we are experts in{" "}
               <span style={{ color: "#00FFFF" }}>
@@ -70,15 +78,18 @@ const LandingSection = () => {
               </span>
             </Typography>
           </Stack>
-          <Stack direction="row" spacing={2}>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={{ xs: 1.5, md: 2 }}
+          >
             <HashLink smooth to="/#services">
               <Button
                 variant="contained"
                 disableRipple
                 sx={{
-                  width: "172px",
-                  height: "40px",
-                  fontSize: "20px",
+                  width: { xs: "130px", md: "172px" },
+                  height: { xs: "30px", md: "40px" },
+                  fontSize: { xs: "16px", md: "20px" },
                   fontWeight: "500",
                   color: "#000000",
                   borderRadius: "50px",
@@ -98,9 +109,9 @@ const LandingSection = () => {
               <Button
                 disableRipple
                 sx={{
-                  width: "128px",
-                  height: "40px",
-                  fontSize: "20px",
+                  width: { xs: "100px", md: "128px" },
+                  height: { xs: "30px", md: "40px" },
+                  fontSize: { xs: "16px", md: "20px" },
                   fontWeight: "500",
                   backgroundColor: "#121212",
                   border: "2px solid #00FFFF",

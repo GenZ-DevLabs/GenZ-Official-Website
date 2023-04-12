@@ -6,8 +6,9 @@ const LetsTalkSection = () => {
   return (
     <section id="letstalk">
       <Box
-        paddingLeft="100px"
-        minHeight="100vh"
+        paddingLeft={{ xs: "40px", md: "100px" }}
+        paddingRight={{ xs: "40px", md: "0px" }}
+        minHeight={{ xs: "60vh", md: "100vh" }}
         display="flex"
         alignItems="center"
         justifyContent="left"
@@ -18,7 +19,7 @@ const LetsTalkSection = () => {
             sx={{
               color: "#FFFFFF",
               fontWeight: "700",
-              fontSize: "40px",
+              fontSize: { xs: "36px", md: "40px" },
             }}
           >
             Let's{" "}
@@ -44,27 +45,31 @@ const LetsTalkSection = () => {
             sx={{
               color: "#FFFFFF",
               fontWeight: "400",
-              fontSize: "16px",
+              fontSize: { xs: "14px", md: "16px" },
               paddingBottom: "40px",
+              display: "flex",
             }}
           >
-            Our team is always excited to welcome new clients
-            <br />
-            and engage with our community. Whether you're interested
+            Our team is always excited to welcome new clients and engage with
+            our community. Whether you're interested
             <br />
             in digital products or just have question,
             <br />
             we're here to help.
           </Typography>
-          <Stack direction="row" spacing={2}>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={2}
+            display="flex"
+          >
             <HashLink smooth to="contactus/#contactus">
               <Button
                 variant="contained"
                 disableRipple
                 sx={{
-                  width: "248px",
-                  height: "40px",
-                  fontSize: "20px",
+                  width: { xs: "180px", md: "248px" },
+                  height: { xs: "30px", md: "40px" },
+                  fontSize: { xs: "14px", md: "20px" },
                   fontWeight: "500",
                   color: "#000000",
                   borderRadius: "50px",
@@ -83,9 +88,9 @@ const LetsTalkSection = () => {
             <Button
               disableRipple
               sx={{
-                width: "192px",
-                height: "40px",
-                fontSize: "20px",
+                width: { xs: "130px", md: "192px" },
+                height: { xs: "30px", md: "40px" },
+                fontSize: { xs: "14px", md: "20px" },
                 fontWeight: "600",
                 backgroundColor: "#121212",
                 border: "2px solid #00FFFF",
