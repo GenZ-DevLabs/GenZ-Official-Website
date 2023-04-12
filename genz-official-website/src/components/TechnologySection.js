@@ -1,15 +1,16 @@
 import React from "react";
-import { Paper, Grid, Stack, Typography } from "@mui/material";
+import { Paper, Grid, Stack, Typography, Box } from "@mui/material";
 import Technologies from "../assets/technologies.png";
 
 const TechnologySection = () => {
   return (
     <Grid
       container
-      minHeight="100vh"
+      minHeight={{ xs: "60vh", sm: "80vh", md: "100vh" }}
       display="flex"
       alignItems="center"
       justifyContent="center"
+      textAlign="center"
       sx={{ backgroundColor: "#1E1D1D" }}
     >
       <Stack direction="column" spacing={2}>
@@ -17,7 +18,8 @@ const TechnologySection = () => {
           sx={{
             color: "#FFFFFF",
             fontWeight: "700",
-            fontSize: "32px",
+            fontSize: { xs: "26px", md: "32px" },
+            padding: { xs: "0px 40px 0px 40px", md: "0px" },
             textAlign: "center",
           }}
         >
@@ -42,33 +44,39 @@ const TechnologySection = () => {
           sx={{
             color: "#FFFFFF",
             fontWeight: "400",
-            fontSize: "16px",
+            fontSize: { xs: "14px", md: "16px" },
             textAlign: "center",
             lineHeight: "20px",
-            paddingBottom: "40px",
+            padding: { xs: "0px 40px 20px 40px", md: "0px 0px 40px 0px" },
           }}
         >
           Our expertise in the latest technologies allows us to deliver
-          customized solutions
-          <br />
-          that meet your unique needs and requirements.
+          customized solutions that meet your unique needs and requirements.
         </Typography>
-        <Paper
-          elevation={3}
+        <Box
           sx={{
-            backgroundColor: "#272626",
-            borderRadius: "16px",
-            height: "450px",
-            width: "800px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
           }}
         >
-          <img
-            src={Technologies}
-            alt="technogies we use"
-            height="450px"
-            width="800px"
-          />
-        </Paper>
+          <Paper
+            sx={{
+              backgroundColor: "#272626",
+              borderRadius: "16px",
+              height: { xs: "180px", sm: "270px", md: "450px" },
+              width: { xs: "320px", sm: "480px", md: "800px" },
+            }}
+          >
+            <img
+              src={Technologies}
+              alt="technogies we use"
+              height="100%"
+              width="auto"
+            />
+          </Paper>
+        </Box>
       </Stack>
     </Grid>
   );

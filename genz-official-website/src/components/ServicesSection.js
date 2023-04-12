@@ -9,6 +9,7 @@ import {
   Avatar,
   CardMedia,
   Card,
+  Box,
 } from "@mui/material";
 
 import Code from "../assets/code.png";
@@ -39,129 +40,139 @@ const cardDetails = [
 const ServicesSection = () => {
   return (
     <section id="services">
-      <Grid
-        container
-        minHeight="100vh"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        sx={{ backgroundColor: "#171616" }}
-      >
-        <Stack spacing={2}>
-          <Typography
-            sx={{
-              color: "#FFFFFF",
-              fontWeight: "700",
-              fontSize: "32px",
-              textAlign: "center",
-            }}
-          >
-            Our{" "}
-            <span
-              style={{
-                color: "#00FFFF",
+      <Box sx={{ padding: "20px 0px 40px 0px", backgroundColor: "#171616" }}>
+        <Grid
+          container
+          minHeight={{ md: "100vh" }}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Stack spacing={2}>
+            <Typography
+              sx={{
+                color: "#FFFFFF",
+                fontWeight: "700",
+                fontSize: { xs: "26px", md: "32px" },
+                textAlign: "center",
+                paddingBottom: { xs: "10px", md: "0px" },
+                paddingTop: { xs: "20px", md: "0px" },
               }}
+              S
             >
-              Expertise
-            </span>
-          </Typography>
-          <Typography
-            sx={{
-              color: "#FFFFFF",
-              fontWeight: "400",
-              fontSize: "16px",
-              textAlign: "center",
-              lineHeight: "20px",
-              paddingBottom: "40px",
-            }}
-          >
-            Our expertise enables us to deliver innovative solutions and tackle
-            <br />
-            complex challenges with ease
-          </Typography>
-          <Stack
-            direction="row"
-            spacing={4}
-            sx={{
-              justifyContent: "center",
-              display: "flex",
-            }}
-          >
-            {cardDetails.map((card, index) => (
-              <Card
-                key={index}
-                elevation="3"
-                sx={{
-                  height: "360px",
-                  width: "300px",
-                  borderRadius: "16px",
-                  backgroundColor: "#1E1D1D",
-                  "&:hover": { cursor: "pointer" },
+              Our{" "}
+              <span
+                style={{
+                  color: "#00FFFF",
                 }}
               >
-                <CardMedia
+                Expertise
+              </span>
+            </Typography>
+            <Typography
+              sx={{
+                color: "#FFFFFF",
+                fontWeight: "400",
+                fontSize: { xs: "14px", md: "16px" },
+                textAlign: "center",
+                lineHeight: "20px",
+                padding: { xs: "0px 40px 20px 40px", md: "40px" },
+              }}
+            >
+              Our expertise enables us to deliver innovative solutions and
+              tackle complex challenges with ease
+            </Typography>
+            <Stack
+              direction={{ xs: "column", md: "row" }}
+              spacing={{ xs: 3, md: 4 }}
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {cardDetails.map((card, index) => (
+                <Card
+                  key={index}
+                  elevation="3"
                   sx={{
-                    justifyContent: "center",
-                    display: "flex",
-                    marginTop: "24px",
+                    height: "360px",
+                    width: "300px",
+                    borderRadius: "16px",
+                    backgroundColor: "#1E1D1D",
+                    "&:hover": { cursor: "pointer" },
                   }}
                 >
-                  <Avatar alt={`Avatar for ${card.title}`} src={card.avatar} />
-                </CardMedia>
-                <CardContent sx={{ textAlign: "center", height: "180px" }}>
-                  <Typography
+                  <CardMedia
                     sx={{
-                      marginTop: "4px",
-                      fontWeight: "700",
-                      fontSize: "20px",
-                      lineHeight: "24px",
-                      textAlign: "center",
-                      color: "#FFFFFF",
-                    }}
-                  >
-                    <div dangerouslySetInnerHTML={{ __html: card.title }} />
-                  </Typography>
-                  <Typography
-                    sx={{
+                      justifyContent: "center",
+                      display: "flex",
                       marginTop: "24px",
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      color: "#FFFFFF",
-                      textAlign: "center",
                     }}
                   >
-                    <div dangerouslySetInnerHTML={{ __html: card.content }} />
-                  </Typography>
-                </CardContent>{" "}
-                <CardActions sx={{ justifyContent: "center", display: "flex" }}>
-                  <Button
-                    size="small"
-                    variant="contained"
-                    disableRipple
-                    sx={{
-                      width: "128px",
-                      height: "32px",
-                      fontSize: "16px",
-                      color: "#1E1E1E",
-                      fontWeight: "600",
-                      borderRadius: "50px",
-                      backgroundColor: "#00FFFF",
-                      verticalAlign: "center",
-                      transitionDuration: "0.5s",
-                      textTransform: "inherit",
-                      "&:hover": {
-                        backgroundColor: "#59FFFF",
-                      },
-                    }}
+                    <Avatar
+                      alt={`Avatar for ${card.title}`}
+                      src={card.avatar}
+                    />
+                  </CardMedia>
+                  <CardContent sx={{ textAlign: "center", height: "180px" }}>
+                    <Typography
+                      sx={{
+                        marginTop: "4px",
+                        fontWeight: "700",
+                        fontSize: "20px",
+                        lineHeight: "24px",
+                        textAlign: "center",
+                        color: "#FFFFFF",
+                      }}
+                    >
+                      <div dangerouslySetInnerHTML={{ __html: card.title }} />
+                    </Typography>
+                    <Typography
+                      sx={{
+                        marginTop: "24px",
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        color: "#FFFFFF",
+                        textAlign: "center",
+                      }}
+                    >
+                      <div dangerouslySetInnerHTML={{ __html: card.content }} />
+                    </Typography>
+                  </CardContent>{" "}
+                  <CardActions
+                    sx={{ justifyContent: "center", display: "flex" }}
                   >
-                    Read More
-                  </Button>
-                </CardActions>
-              </Card>
-            ))}
+                    <Button
+                      size="small"
+                      variant="contained"
+                      disableRipple
+                      sx={{
+                        width: "128px",
+                        height: "32px",
+                        fontSize: "16px",
+                        color: "#1E1E1E",
+                        fontWeight: "600",
+                        borderRadius: "50px",
+                        backgroundColor: "#00FFFF",
+                        verticalAlign: "center",
+                        transitionDuration: "0.5s",
+                        textTransform: "inherit",
+                        "&:hover": {
+                          backgroundColor: "#59FFFF",
+                        },
+                      }}
+                    >
+                      Read More
+                    </Button>
+                  </CardActions>
+                </Card>
+              ))}
+            </Stack>
           </Stack>
-        </Stack>
-      </Grid>
+        </Grid>
+      </Box>
     </section>
   );
 };
