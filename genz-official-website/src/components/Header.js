@@ -112,6 +112,7 @@ export const Header = () => {
               variant="contained"
               disableRipple
               sx={{
+                display: { xs: "none", sm: "block" },
                 width: { xs: "80px", sm: "90px", md: "128px" },
                 height: { xs: "30px", md: "40px" },
                 fontSize: { xs: "11px", sm: "14px", md: "16px" },

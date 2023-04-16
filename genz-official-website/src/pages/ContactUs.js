@@ -6,72 +6,73 @@ import ContactUsForm from "../components/ContactUsForm";
 export const ContactUs = () => {
   return (
     <section id="contactus">
-      <Box
-        paddingLeft="100px"
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        paddingLeft={{ xs: "0px", md: "100px" }}
         minHeight="100vh"
         display="flex"
         alignItems="center"
-        justifyContent="left"
+        justifyContent={{ xs: "center", md: "left" }}
         sx={{ backgroundColor: "#0F0F0E" }}
       >
-        <Grid container>
-          <Grid xs={12} sm={6} item>
-            <div
-              style={{
-                marginTop: "160px",
-                display: "flex",
-                justifyContent: "left",
-                alignItems: "center",
-              }}
+        <Grid container marginRight={{ md: "50px" }}>
+          <Grid xs={12} sm={12} md={6} item>
+            <Box
+              textAlign={{ xs: "center", md: "left" }}
+              marginTop={{ md: "160px" }}
             >
-              <Box>
-                <Stack>
-                  <Typography
-                    sx={{
-                      color: "#FFFFFF",
-                      fontWeight: 700,
-                      fontSize: "48px",
+              <Stack>
+                <Typography
+                  sx={{
+                    color: "#FFFFFF",
+                    fontWeight: 700,
+                    fontSize: { xs: "48px", lg: "70px" },
+                  }}
+                >
+                  Let's{" "}
+                  <span
+                    style={{
+                      color: "#00FFFF",
                     }}
                   >
-                    Let's{" "}
-                    <span
-                      style={{
-                        color: "#00FFFF",
-                      }}
-                    >
-                      Talk
-                    </span>
-                  </Typography>
-                </Stack>
-                <Stack>
-                  <Typography
-                    sx={{
-                      color: "#FFFFFF",
-                      fontWeight: 400,
-                      fontSize: "16px",
-                      textAlign: "left",
-                      lineHeight: "20px",
-                      paddingBottom: "40px",
-                    }}
-                  >
-                    Our team is always excited to welcome new clients
-                    <br />
-                    and engage with our community. Whether you're interested{" "}
-                    <br />
-                    in digital products or just have question, <br />
-                    we're here to help.
-                  </Typography>
-                </Stack>
-              </Box>
-            </div>
+                    Talk
+                  </span>
+                </Typography>
+              </Stack>
+              <Stack>
+                <Typography
+                  sx={{
+                    color: "#FFFFFF",
+                    fontWeight: 400,
+                    fontSize: "16px",
+                    lineHeight: "20px",
+                  }}
+                >
+                  Our team is always excited to welcome new clients
+                  <br />
+                  and engage with our community. Whether you're interested{" "}
+                  <br />
+                  in digital products or just have question, <br />
+                  we're here to help.
+                </Typography>
+              </Stack>
+            </Box>
           </Grid>
-          <Grid xs={12} sm={6} item>
+          <Grid
+            xs={12}
+            sm={12}
+            md={6}
+            item
+            display="flex"
+            justifyContent={{ xs: "center", lg: "left" }}
+            alignItems="center"
+          >
             <Card
               component="form"
               sx={{
-                marginTop: "80px",
-                width: "610px",
-                height: "550px",
+                marginTop: { xs: "20px", md: "80px" },
+                width: { xs: "340px", md: "610px" },
+                height: { xs: "auto", md: "550px" },
                 backgroundColor: "#171616",
                 borderRadius: "16px",
               }}
@@ -82,7 +83,7 @@ export const ContactUs = () => {
             </Card>
           </Grid>
         </Grid>
-      </Box>
+      </Stack>
     </section>
   );
 };
