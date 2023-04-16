@@ -10,7 +10,7 @@ const LandingSection = () => {
         container
         spacing={2}
         paddingLeft={{ xs: "80px", md: "100px" }}
-        minHeight={{ xs: "80vh", md: "100vh" }}
+        minHeight={{ xs: "100vh", md: "100vh" }}
         display="flex"
         alignItems="center"
         justifyContent="left"

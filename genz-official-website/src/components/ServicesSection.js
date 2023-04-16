@@ -21,19 +21,18 @@ const cardDetails = [
     avatar: Code,
     title: "Web Applications Development",
     content:
-      "We are using ReactJS, Angular, HTML, CSS, JavaScript, Bootstrap, Rest API, Django, Java, etc to develop Web Applications.",
+      "ReactJS, Angular, HTML, CSS, JavaScript, Bootstrap, Material UI, Django, MongoDB, Java, etc.",
   },
   {
     avatar: Phone,
     title: "Mobile Applications Development",
-    content:
-      "We are mainly using React Native, Flutter to develop Mobile Applications.",
+    content: "React Native, Flutter, Dart, Java, Python etc.",
   },
   {
     avatar: Brush,
     title: "UI/UX<br/>Design",
     content:
-      "We are mainly using Figma and Adobe XD to design UI/<br/>UX Designs",
+      "Using Figma and Adobe XD to Draw Wireframes and design UI/UX Designs",
   },
 ];
 

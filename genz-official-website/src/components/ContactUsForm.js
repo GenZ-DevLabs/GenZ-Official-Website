@@ -3,8 +3,15 @@ import React from "react";
 
 const ContactUsForm = () => {
   return (
-    <Grid container spacing={1} sx={{ paddingTop: "40px" }}>
-      <Grid xs={12} sm={6} item>
+    <Grid
+      container
+      spacing={1}
+      sx={{ paddingTop: { xs: "20px", md: "40px" } }}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Grid xs={6} item>
         <TextField
           variant="outlined"
           label="Full Name"
@@ -12,10 +19,13 @@ const ContactUsForm = () => {
           id="full-name"
           fullWidth
           required
-          sx={{ bgcolor: "#292929", borderRadius: "4px" }}
+          sx={{
+            bgcolor: "#292929",
+            borderRadius: "15px",
+          }}
         />
       </Grid>
-      <Grid xs={12} sm={6} item>
+      <Grid xs={6} item>
         <TextField
           variant="outlined"
           type="email"
@@ -24,10 +34,10 @@ const ContactUsForm = () => {
           id="email-address"
           fullWidth
           required
-          sx={{ bgcolor: "#292929", borderRadius: "4px" }}
+          sx={{ bgcolor: "#292929", borderRadius: "15px" }}
         />
       </Grid>
-      <Grid xs={12} sm={6} item>
+      <Grid xs={12} md={6} item>
         <TextField
           variant="outlined"
           type="tel"
@@ -36,10 +46,10 @@ const ContactUsForm = () => {
           id="tel-num"
           fullWidth
           required
-          sx={{ bgcolor: "#292929", borderRadius: "4px" }}
+          sx={{ bgcolor: "#292929", borderRadius: "15px" }}
         />
       </Grid>
-      <Grid xs={12} sm={6} item>
+      <Grid xs={12} sm={12} md={6} item>
         <TextField
           variant="outlined"
           label="Email Subject"
@@ -47,7 +57,7 @@ const ContactUsForm = () => {
           id="email-subject"
           fullWidth
           required
-          sx={{ bgcolor: "#292929", borderRadius: "4px" }}
+          sx={{ bgcolor: "#292929", borderRadius: "15px" }}
         />
       </Grid>
       <Grid xs={12} item>
@@ -60,7 +70,7 @@ const ContactUsForm = () => {
           rows={10}
           fullWidth
           required
-          sx={{ bgcolor: "#292929", borderRadius: "4px" }}
+          sx={{ bgcolor: "#292929", borderRadius: "15px" }}
         />
       </Grid>
       <Grid xs={12} item>
