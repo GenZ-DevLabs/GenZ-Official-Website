@@ -9,7 +9,8 @@ export const ContactUs = () => {
       <Stack
         direction={{ xs: "column", md: "row" }}
         paddingLeft={{ xs: "0px", md: "100px" }}
-        minHeight="100vh"
+        minHeight={{ xs: "120vh", md: "100vh" }}
+        s
         display="flex"
         alignItems="center"
         justifyContent={{ xs: "center", md: "left" }}
