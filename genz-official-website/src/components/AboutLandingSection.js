@@ -6,18 +6,25 @@ const AboutLandingSection = () => {
     <section id="about">
       <Grid
         container
-        spacing={2}
-        paddingLeft="100px"
-        minHeight="100vh"
+        minHeight={{ xs: "80vh", md: "100vh" }}
         display="flex"
         alignItems="center"
         justifyContent="left"
         sx={{ backgroundColor: "#121212" }}
       >
-        <Stack sx={{ height: "auto", width: "50%" }}>
+        <Stack
+          sx={{
+            width: { xs: "80%", md: "50%" },
+            marginLeft: { xs: "40px", md: "100px" },
+          }}
+        >
           <Typography
             variant="h6"
-            sx={{ color: "#FFFFFF", fontSize: "48px", fontWeight: "700" }}
+            sx={{
+              color: "#FFFFFF",
+              fontSize: { xs: "40px", md: "48px", lg: "60px" },
+              fontWeight: "700",
+            }}
           >
             <span style={{ color: "#00FFFF" }}>GenZ DevLabs</span> is a<br />
             <span style={{ color: "#00FFFF" }}>Tech Driven</span> Company
@@ -28,8 +35,9 @@ const AboutLandingSection = () => {
             sx={{
               fontStyle: "normal",
               fontWeight: "400",
-              fontSize: "20px",
+              fontSize: { xs: "14px", md: "16px" },
               color: "#FFFFFF",
+              display: { xs: "none", sm: "block" },
             }}
           >
             We provides innovative technology solutions and services to business
@@ -44,13 +52,12 @@ const AboutLandingSection = () => {
           <Typography
             sx={{
               fontStyle: "normal",
-              fontSize: "32px",
+              fontSize: { xs: "24px", md: "32px" },
               fontWeight: "700",
               color: "#FFFFFF",
             }}
           >
-            We are <span style={{ color: "#00FFFF" }}>Committed </span>to
-            Empowering
+            <span style={{ color: "#00FFFF" }}>Committed </span>to Empowering
             <br />
             You to <span style={{ color: "#00FFFF" }}>Succeed </span>
             in the <span style={{ color: "#00FFFF" }}>Digital World</span>

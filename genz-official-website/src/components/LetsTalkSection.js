@@ -19,7 +19,7 @@ const LetsTalkSection = () => {
             sx={{
               color: "#FFFFFF",
               fontWeight: "700",
-              fontSize: { xs: "36px", md: "40px" },
+              fontSize: { xs: "40px", md: "70px" },
             }}
           >
             Let's{" "}
