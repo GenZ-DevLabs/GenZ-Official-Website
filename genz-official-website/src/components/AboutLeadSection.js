@@ -33,7 +33,7 @@ const AboutLeadSection = () => {
     <section id="about">
       <Grid
         container
-        minHeight={{ xs: "210vh", md: "100vh" }}
+        minHeight={{ xs: "210vh", md: "80vh" }}
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -56,7 +56,7 @@ const AboutLeadSection = () => {
               fontSize: "16px",
               color: "#FFFFFF",
               marginBottom: "50px",
-              margin: { xs: "0px 40px 30px 40px", md: "0px" },
+              padding: { xs: "0px 40px 40px 40px", md: "0px" },
             }}
           >
             Behind every successful endeavour lies a <br /> collective effort of
