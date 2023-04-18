@@ -1,26 +1,31 @@
 import React from "react";
-import { Grid, Typography, Stack } from "@mui/material";
+import { Grid, Typography, Stack, Box, Card } from "@mui/material";
+import p1 from "../assets/teamPhotos/1.jpg";
+import p2 from "../assets/teamPhotos/2.jpg";
+import p3 from "../assets/teamPhotos/3.jpg";
+import p4 from "../assets/teamPhotos/4.jpg";
+import p5 from "../assets/teamPhotos/5.jpg";
+import p6 from "../assets/teamPhotos/6.jpg";
+import p7 from "../assets/teamPhotos/7.jpg";
+import p8 from "../assets/teamPhotos/8.jpg";
 
 const AboutFamilySection = () => {
   return (
     <section id="about">
       <Grid
         container
-        spacing={2}
-        paddingLeft="100px"
-        minHeight="100vh"
+        minHeight={{ xs: "350vh", md: "100vh" }}
         display="flex"
         alignItems="center"
         justifyContent="center"
-        paddingBottom="100px"
-        sx={{ backgroundColor: "#1E1D1D", paddingTop: "50px" }}
+        sx={{ backgroundColor: "#1E1D1D" }}
       >
         <Stack
           sx={{
-            height: "auto",
-            width: "50%",
-            margin: "0 auto",
+            width: { xs: "80%", md: "50%" },
             textAlign: "center",
+            fontFamily: "Roboto",
+            fontStyle: "normal",
           }}
         >
           <Typography
@@ -29,8 +34,6 @@ const AboutFamilySection = () => {
               color: "#FFFFFF",
               fontSize: "32px",
               fontWeight: "700",
-              fontFamily: "Roboto",
-              fontStyle: "normal",
             }}
           >
             <span>GenZ </span>
@@ -40,8 +43,6 @@ const AboutFamilySection = () => {
           <Typography
             variant="body2"
             sx={{
-              fontfamily: "Roboto",
-              fontStyle: "normal",
               fontWeight: "400",
               fontSize: "16px",
               color: "#FFFFFF",
@@ -54,46 +55,108 @@ const AboutFamilySection = () => {
             thrive and contribute their unique talents to our shared mission.
           </Typography>
         </Stack>
-        <div style={{ marginTop: "100px" }}>
-          <CardsContainer />
-          <div style={{ marginTop: "20px" }}>
-            <CardsContainer />
-          </div>
-        </div>
+        <Stack width="80%">
+          <CardsContainer1 />
+          <CardsContainer2 />
+        </Stack>
       </Grid>
     </section>
   );
 };
 
-const Card = () => {
-  return (
-    <div
-      style={{
-        width: "300px",
-        height: "300px",
-        background: "#292929",
-        borderRadius: "15px",
-      }}
-    >
-      {/* Add content of the card here */}
-    </div>
-  );
-};
+const cardDetails1 = [
+  { photo: p1 },
+  { photo: p2 },
+  { photo: p3 },
+  { photo: p4 },
+];
 
-const CardsContainer = () => {
+const cardDetails2 = [
+  { photo: p5 },
+  { photo: p6 },
+  { photo: p7 },
+  { photo: p8 },
+];
+
+const CardsContainer1 = () => {
   return (
     <Stack
       direction={{ xs: "column", md: "row" }}
-      spacing={{ xs: 3, md: 4 }}
+      spacing={2}
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexWrap: "wrap",
+        marginBottom: "20px",
       }}
     >
-      {[...Array(4)].map((_, index) => (
-        <Card key={index} />
+      {cardDetails1.map((card, index) => (
+        <Card
+          key={index}
+          sx={{
+            width: "300px",
+            height: "300px",
+            borderRadius: "15px",
+          }}
+        >
+          <Box style={{ position: "relative" }}>
+            <Box
+              component={"img"}
+              src={card.photo}
+              alt="photo"
+              style={{
+                width: "auto",
+                height: "300px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            />
+          </Box>
+        </Card>
+      ))}
+    </Stack>
+  );
+};
+
+const CardsContainer2 = () => {
+  return (
+    <Stack
+      direction={{ xs: "column", md: "row" }}
+      spacing={2}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexWrap: "wrap",
+        marginBottom: "20px",
+      }}
+    >
+      {cardDetails2.map((card, index) => (
+        <Card
+          key={index}
+          sx={{
+            width: "300px",
+            height: "300px",
+            borderRadius: "15px",
+          }}
+        >
+          <Box style={{ position: "relative" }}>
+            <Box
+              component={"img"}
+              src={card.photo}
+              alt="photo"
+              style={{
+                width: "auto",
+                height: "300px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            />
+          </Box>
+        </Card>
       ))}
     </Stack>
   );

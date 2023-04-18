@@ -53,7 +53,7 @@ const LandingSection = () => {
                 color: "#FFFFFF",
               }}
             >
-              We are team of talented engineers,
+              A team of talented engineers,
             </Typography>
             <Typography
               sx={{
@@ -62,7 +62,7 @@ const LandingSection = () => {
                 color: "#FFFFFF",
               }}
             >
-              And we are experts in{" "}
+              Experts in{" "}
               <span style={{ color: "#00FFFF" }}>
                 <TypeAnimation
                   sequence={[
