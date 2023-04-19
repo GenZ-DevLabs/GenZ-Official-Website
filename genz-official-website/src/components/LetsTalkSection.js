@@ -108,7 +108,7 @@ const LetsTalkSection = () => {
                 },
               }}
             >
-              <a href="tel:+94123456789" style={{ textDecoration: "none" }}>
+              <a href="tel:+94701765144" style={{ textDecoration: "none" }}>
                 <span style={{ color: "#00FFFF" }}>+94701765144</span>
               </a>
             </Button>
