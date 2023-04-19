@@ -82,7 +82,7 @@ const LandingSection = () => {
             direction={{ xs: "column", md: "row" }}
             spacing={{ xs: 1.5, md: 2 }}
           >
-            <HashLink smooth to="/#services">
+            <HashLink smooth to="/#services" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
                 disableRipple
@@ -105,7 +105,7 @@ const LandingSection = () => {
                 See Our Work
               </Button>
             </HashLink>
-            <HashLink smooth to="contactus">
+            <HashLink smooth to="contactus" style={{ textDecoration: "none" }}>
               <Button
                 disableRipple
                 sx={{

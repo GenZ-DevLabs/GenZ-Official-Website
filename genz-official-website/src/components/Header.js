@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import {
   AppBar,
   Box,
@@ -25,30 +25,30 @@ const StyledButton = styled(Button)({
 });
 
 export const Header = () => {
-  const headerRef = useRef(null);
+  // const headerRef = useRef(null);
 
-  useEffect(() => {
-    let prevScrollPos = window.scrollY;
+  // useEffect(() => {
+  //   let prevScrollPos = window.scrollY;
 
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const headerElement = headerRef.current;
-      if (!headerElement) {
-        return;
-      }
-      if (prevScrollPos > currentScrollPos) {
-        headerElement.style.transform = "translateY(0)";
-      } else {
-        headerElement.style.transform = "translateY(-200px)";
-      }
-      prevScrollPos = currentScrollPos;
-    };
-    window.addEventListener("scroll", handleScroll);
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.scrollY;
+  //     const headerElement = headerRef.current;
+  //     if (!headerElement) {
+  //       return;
+  //     }
+  //     if (prevScrollPos > currentScrollPos) {
+  //       headerElement.style.transform = "translateY(0)";
+  //     } else {
+  //       headerElement.style.transform = "translateY(-200px)";
+  //     }
+  //     prevScrollPos = currentScrollPos;
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <AppBar
@@ -58,7 +58,7 @@ export const Header = () => {
       }}
     >
       <Toolbar>
-        <HashLink to="/#landing">
+        <HashLink to="/#landing" style={{ textDecoration: "none" }}>
           <IconButton disableRipple sx={{ p: 0 }}>
             <Box
               component="img"
@@ -83,7 +83,7 @@ export const Header = () => {
             display: { md: "flex" },
           }}
         >
-          <HashLink smooth to="/#landing">
+          <HashLink smooth to="/#landing" style={{ textDecoration: "none" }}>
             <StyledButton
               disableRipple
               sx={{ fontSize: { xs: "14px", sm: "16px" } }}
@@ -99,7 +99,7 @@ export const Header = () => {
               About
             </StyledButton>
           </HashLink>
-          <HashLink smooth to="/#services">
+          <HashLink smooth to="/#services" style={{ textDecoration: "none" }}>
             <StyledButton
               disableRipple
               sx={{ fontSize: { xs: "14px", sm: "16px" } }}
@@ -107,7 +107,7 @@ export const Header = () => {
               Services
             </StyledButton>
           </HashLink>
-          <HashLink smooth to="/#letstalk">
+          <HashLink smooth to="/#letstalk" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
               disableRipple

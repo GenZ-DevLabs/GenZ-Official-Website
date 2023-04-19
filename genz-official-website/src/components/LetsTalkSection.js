@@ -62,7 +62,11 @@ const LetsTalkSection = () => {
             spacing={2}
             display="flex"
           >
-            <HashLink smooth to="contactus/#contactus">
+            <HashLink
+              smooth
+              to="contactus/#contactus"
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 variant="contained"
                 disableRipple

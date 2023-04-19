@@ -73,7 +73,6 @@ const AboutLeadSection = () => {
               flexWrap: "wrap",
               alignItems: "center",
               justifyContent: "center",
-              fontFamily: "Roboto",
               fontStyle: "normal",
               color: "#1E1E1E",
             }}
