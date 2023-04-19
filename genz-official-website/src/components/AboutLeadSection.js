@@ -69,6 +69,7 @@ const AboutLeadSection = () => {
             direction={{ xs: "column", md: "row" }}
             spacing={3}
             sx={{
+              fontFamily: "Roboto",
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
@@ -114,7 +115,7 @@ const AboutLeadSection = () => {
                       <Box
                         style={{
                           fontWeight: "600",
-                          fontSize: "20px",
+                          fontSize: "18px",
                         }}
                       >
                         {card.post}
@@ -122,7 +123,7 @@ const AboutLeadSection = () => {
                       <Box
                         style={{
                           fontWeight: "400",
-                          fontSize: "15px",
+                          fontSize: "14px",
                         }}
                       >
                         {card.name}
