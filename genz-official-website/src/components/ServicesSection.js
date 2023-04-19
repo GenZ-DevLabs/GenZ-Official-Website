@@ -83,7 +83,9 @@ const ServicesSection = () => {
               }}
             >
               Our expertise enables us to deliver innovative solutions and
-              tackle complex challenges with ease
+              tackle
+              <br />
+              complex challenges with ease
             </Typography>
             <Stack
               direction={{ xs: "column", md: "row" }}
@@ -109,6 +111,22 @@ const ServicesSection = () => {
                   }}
                 >
                   {isFlipped ? (
+                    <CardContent>
+                      <Typography
+                        sx={{
+                          marginTop: "24px",
+                          fontWeight: "400",
+                          fontSize: "16px",
+                          color: "#FFFFFF",
+                          textAlign: "center",
+                        }}
+                      >
+                        <div
+                          dangerouslySetInnerHTML={{ __html: card.content }}
+                        />
+                      </Typography>
+                    </CardContent>
+                  ) : (
                     <>
                       <CardMedia
                         sx={{
@@ -141,22 +159,6 @@ const ServicesSection = () => {
                         </Typography>
                       </CardContent>
                     </>
-                  ) : (
-                    <CardContent>
-                      <Typography
-                        sx={{
-                          marginTop: "24px",
-                          fontWeight: "400",
-                          fontSize: "16px",
-                          color: "#FFFFFF",
-                          textAlign: "center",
-                        }}
-                      >
-                        <div
-                          dangerouslySetInnerHTML={{ __html: card.content }}
-                        />
-                      </Typography>
-                    </CardContent>
                   )}
 
                   {/* <CardActions
