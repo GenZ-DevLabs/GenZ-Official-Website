@@ -86,7 +86,7 @@ const LetsTalkSection = () => {
                   },
                 }}
               >
-                hello@genzdevlabs.com
+                genzdevlabs@gmail.com
               </Button>
             </HashLink>
             <Button
@@ -96,9 +96,9 @@ const LetsTalkSection = () => {
                 height: { xs: "30px", md: "40px" },
                 fontSize: { xs: "14px", md: "20px" },
                 fontWeight: "600",
+                color: "#00FFFF",
                 backgroundColor: "#121212",
                 border: "2px solid #00FFFF",
-                color: "#00FFFF",
                 borderRadius: "50px",
                 verticalAlign: "center",
                 transitionDuration: "0.5s",
@@ -108,7 +108,9 @@ const LetsTalkSection = () => {
                 },
               }}
             >
-              +94 12 345 6789
+              <a href="tel:+94123456789" style={{ textDecoration: "none" }}>
+                <span style={{ color: "#00FFFF" }}>+94123456789</span>
+              </a>
             </Button>
           </Stack>
         </Stack>
