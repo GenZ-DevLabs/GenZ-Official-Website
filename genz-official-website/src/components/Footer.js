@@ -28,7 +28,7 @@ export const Footer = () => {
       >
         <Grid container display="flex">
           <Grid item sm={12} md={12} lg={6} textAlign={"center"}>
-            <HashLink to="/#landing">
+            <HashLink to="/#landing" style={{ textDecoration: "none" }}>
               <IconButton>
                 <Box
                   component="img"
@@ -193,8 +193,7 @@ export const Footer = () => {
                   fontSize: { xs: "13px", md: "14px" },
                 }}
               >
-                {" "}
-                LinkedIn{" "}
+                LinkedIn
               </StyledTypo>
             </a>
             <a
@@ -209,8 +208,7 @@ export const Footer = () => {
                   fontSize: { xs: "13px", md: "14px" },
                 }}
               >
-                {" "}
-                Twitter{" "}
+                Twitter
               </StyledTypo>
             </a>
             <a
@@ -225,8 +223,7 @@ export const Footer = () => {
                   fontSize: { xs: "13px", md: "14px" },
                 }}
               >
-                {" "}
-                Facebook{" "}
+                Facebook
               </StyledTypo>
             </a>
             <a
@@ -241,8 +238,7 @@ export const Footer = () => {
                   fontSize: { xs: "13px", md: "14px" },
                 }}
               >
-                {" "}
-                Instagram{" "}
+                Instagram
               </StyledTypo>
             </a>
           </Grid>

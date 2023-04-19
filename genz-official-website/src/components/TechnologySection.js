@@ -71,7 +71,7 @@ const TechnologySection = () => {
           >
             <img
               src={Technologies}
-              alt="technogies we use"
+              alt="technologies we use"
               height="100%"
               width="auto"
             />

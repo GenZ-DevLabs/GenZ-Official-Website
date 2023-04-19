@@ -73,7 +73,7 @@ export const ContactUs = () => {
               sx={{
                 marginTop: { xs: "20px", md: "80px" },
                 width: { xs: "340px", md: "610px" },
-                height: { xs: "auto", md: "550px" },
+                height: { xs: "auto", md: "570px" },
                 backgroundColor: "#171616",
                 borderRadius: "16px",
               }}
