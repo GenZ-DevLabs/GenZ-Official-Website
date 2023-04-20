@@ -22,7 +22,7 @@ const LandingSection = () => {
               sx={{
                 color: "#FFFFFF",
                 fontWeight: "600",
-                fontSize: { xs: "40px", md: "70px" },
+                fontSize: { xs: "40px", md: "70px", lg: "90px" },
               }}
             >
               Innovating for{" "}
@@ -48,7 +48,7 @@ const LandingSection = () => {
           <Stack>
             <Typography
               sx={{
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "16px", md: "20px", lg: "24px" },
                 fontWeight: "400",
                 color: "#FFFFFF",
               }}
@@ -57,7 +57,7 @@ const LandingSection = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: { xs: "20px", md: "24px" },
+                fontSize: { xs: "20px", md: "24px", lg: "30px" },
                 fontWeight: "600",
                 color: "#FFFFFF",
               }}
