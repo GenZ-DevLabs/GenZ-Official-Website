@@ -198,7 +198,7 @@ export const Footer = () => {
             </a>
             <a
               style={{ textDecoration: "none" }}
-              href="https://www.twitter.com/"
+              href="https://twitter.com/GenZDevLabs"
               target="_blank"
               rel="noreferrer"
             >
