@@ -228,7 +228,7 @@ export const Footer = () => {
             </a>
             <a
               style={{ textDecoration: "none" }}
-              href="https://www.instagram.com/"
+              href="https://web.facebook.com/profile.php?id=100092240535964"
               target="_blank"
               rel="noreferrer"
             >
