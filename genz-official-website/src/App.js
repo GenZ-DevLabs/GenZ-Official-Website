@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import { About } from "./pages/About";
 import { Footer } from "./components/Footer";
+import WhatsappWidget from "./components/WhatsappWidget";
 
 const theme = createTheme({
   palette: {
@@ -48,6 +49,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Header />
+        <WhatsappWidget />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/contactus" element={<ContactUs />} />

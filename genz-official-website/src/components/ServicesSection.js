@@ -35,12 +35,6 @@ const cardDetails = [
 ];
 
 const ServicesSection = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleClick = (index) => {
-    setIsFlipped(!isFlipped);
-  };
-
   return (
     <section id="services">
       <Box sx={{ padding: "20px 0px 40px 0px", backgroundColor: "#171616" }}>
@@ -100,7 +94,6 @@ const ServicesSection = () => {
               {cardDetails.map((card, index) => (
                 <Card
                   key={index}
-                  onClick={() => handleClick(index)}
                   elevation="3"
                   sx={{
                     height: "360px",
@@ -110,57 +103,46 @@ const ServicesSection = () => {
                     "&:hover": { cursor: "pointer" },
                   }}
                 >
-                  {isFlipped ? (
-                    <CardContent>
-                      <Typography
-                        sx={{
-                          marginTop: "24px",
-                          fontWeight: "400",
-                          fontSize: "16px",
-                          color: "#FFFFFF",
-                          textAlign: "center",
-                        }}
-                      >
-                        <div
-                          dangerouslySetInnerHTML={{ __html: card.content }}
-                        />
-                      </Typography>
-                    </CardContent>
-                  ) : (
-                    <>
-                      <CardMedia
-                        sx={{
-                          justifyContent: "center",
-                          display: "flex",
-                          marginTop: "24px",
-                        }}
-                      >
-                        <Avatar
-                          alt={`Avatar for ${card.title}`}
-                          src={card.avatar}
-                        />
-                      </CardMedia>
-                      <CardContent
-                        sx={{ textAlign: "center", height: "180px" }}
-                      >
-                        <Typography
-                          sx={{
-                            marginTop: "4px",
-                            fontWeight: "700",
-                            fontSize: "20px",
-                            lineHeight: "24px",
-                            textAlign: "center",
-                            color: "#FFFFFF",
-                          }}
-                        >
-                          <div
-                            dangerouslySetInnerHTML={{ __html: card.title }}
-                          />
-                        </Typography>
-                      </CardContent>
-                    </>
-                  )}
+                  <CardContent>
+                    <CardMedia
+                      sx={{
+                        justifyContent: "center",
+                        display: "flex",
+                        marginTop: "24px",
+                        marginBottom: "24px",
+                      }}
+                    >
+                      <Avatar
+                        alt={`Avatar for ${card.title}`}
+                        src={card.avatar}
+                      />
+                    </CardMedia>
 
+                    <Typography
+                      sx={{
+                        marginTop: "4px",
+                        fontWeight: "700",
+                        fontSize: "20px",
+                        lineHeight: "24px",
+                        textAlign: "center",
+                        color: "#FFFFFF",
+                        paddingBottom: "24px",
+                      }}
+                    >
+                      <div dangerouslySetInnerHTML={{ __html: card.title }} />
+                    </Typography>
+                    <Typography
+                      sx={{
+                        marginTop: "24px",
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        color: "#FFFFFF",
+                        textAlign: "center",
+                      }}
+                    >
+                      <div dangerouslySetInnerHTML={{ __html: card.content }} />
+                    </Typography>
+                  </CardContent>
                   {/* <CardActions
                     sx={{ justifyContent: "center", display: "flex" }}
                   >
