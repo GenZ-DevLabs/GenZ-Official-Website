@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Box,
@@ -7,7 +7,10 @@ import {
   Stack,
   Toolbar,
   styled,
+  useMediaQuery,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Logo from "../assets/genzLogo.png";
 import { HashLink } from "react-router-hash-link";
 
@@ -25,30 +28,12 @@ const StyledButton = styled(Button)({
 });
 
 export const Header = () => {
-  // const headerRef = useRef(null);
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-  // useEffect(() => {
-  //   let prevScrollPos = window.scrollY;
-
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.scrollY;
-  //     const headerElement = headerRef.current;
-  //     if (!headerElement) {
-  //       return;
-  //     }
-  //     if (prevScrollPos > currentScrollPos) {
-  //       headerElement.style.transform = "translateY(0)";
-  //     } else {
-  //       headerElement.style.transform = "translateY(-200px)";
-  //     }
-  //     prevScrollPos = currentScrollPos;
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   return (
     <AppBar
@@ -74,67 +59,133 @@ export const Header = () => {
           </IconButton>
         </HashLink>
 
-        <Stack
-          justifyContent="flex-end"
-          direction="row"
-          spacing={{ xs: 0, sm: 1, md: 4 }}
-          sx={{
-            flexGrow: 1,
-            display: { md: "flex" },
-          }}
-        >
-          <HashLink smooth to="/#landing" style={{ textDecoration: "none" }}>
-            <StyledButton
-              disableRipple
-              sx={{ fontSize: { xs: "14px", sm: "16px" } }}
-            >
-              Home
-            </StyledButton>
-          </HashLink>
-          <HashLink smooth to="/about">
-            <StyledButton
-              disableRipple
-              sx={{ fontSize: { xs: "14px", sm: "16px" } }}
-            >
-              About
-            </StyledButton>
-          </HashLink>
-          <HashLink smooth to="/#services" style={{ textDecoration: "none" }}>
-            <StyledButton
-              disableRipple
-              sx={{ fontSize: { xs: "14px", sm: "16px" } }}
-            >
-              Services
-            </StyledButton>
-          </HashLink>
-          <HashLink smooth to="/#letstalk" style={{ textDecoration: "none" }}>
-            <Button
-              variant="contained"
-              disableRipple
+        {isMobile ? (
+          <IconButton
+            onClick={toggleMenu}
+            sx={{ ml: "auto", color: "#ffffff" }}
+          >
+            {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
+        ) : (
+          <Stack
+            justifyContent="flex-end"
+            direction="row"
+            spacing={{ xs: 0, sm: 1, md: 4 }}
+            sx={{
+              flexGrow: 1,
+              display: { md: "flex" },
+            }}
+          >
+            <HashLink smooth to="/#landing" style={{ textDecoration: "none" }}>
+              <StyledButton
+                disableRipple
+                sx={{ fontSize: { xs: "14px", sm: "16px" } }}
+              >
+                Home
+              </StyledButton>
+            </HashLink>
+            <HashLink smooth to="/about">
+              <StyledButton
+                disableRipple
+                sx={{ fontSize: { xs: "14px", sm: "16px" } }}
+              >
+                About
+              </StyledButton>
+            </HashLink>
+            <HashLink smooth to="/#services" style={{ textDecoration: "none" }}>
+              <StyledButton
+                disableRipple
+                sx={{ fontSize: { xs: "14px", sm: "16px" } }}
+              >
+                Services
+              </StyledButton>
+            </HashLink>
+            <HashLink smooth to="/#letstalk" style={{ textDecoration: "none" }}>
+              <Button
+                variant="contained"
+                disableRipple
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                  width: { xs: "80px", sm: "90px", md: "128px" },
+                  height: { xs: "30px", md: "40px" },
+                  fontSize: { xs: "11px", sm: "14px", md: "16px" },
+                  marginTop: { xs: "5px", sm: "5px", md: "0px" },
+                  fontWeight: "600",
+                  color: "#000000",
+                  borderRadius: "50px",
+                  backgroundColor: "#00FFFF",
+                  verticalAlign: "center",
+                  transitionDuration: "0.5s",
+                  textTransform: "inherit",
+                  "&:hover": {
+                    backgroundColor: "#0F0E0E",
+                    border: "2px solid #00FFFF",
+                    color: "#00FFFF",
+                  },
+                }}
+              >
+                Let's Talk
+              </Button>
+            </HashLink>
+          </Stack>
+        )}
+
+        {isMobile && isMenuOpen && (
+          <Box
+            sx={{
+              position: "absolute",
+              top: "66px",
+              left: "0",
+              right: "0",
+              backgroundColor: "#0F0E0E",
+              zIndex: "999",
+            }}
+          >
+            <Stack
+              justifyContent="center"
+              direction="column"
+              spacing={2}
               sx={{
-                display: { xs: "none", sm: "block" },
-                width: { xs: "80px", sm: "90px", md: "128px" },
-                height: { xs: "30px", md: "40px" },
-                fontSize: { xs: "11px", sm: "14px", md: "16px" },
-                marginTop: { xs: "5px", sm: "5px", md: "0px" },
-                fontWeight: "600",
-                color: "#000000",
-                borderRadius: "50px",
-                backgroundColor: "#00FFFF",
-                verticalAlign: "center",
-                transitionDuration: "0.5s",
-                textTransform: "inherit",
-                "&:hover": {
-                  backgroundColor: "#0F0E0E",
-                  border: "2px solid #00FFFF",
-                  color: "#00FFFF",
-                },
+                display: "flex",
+                alignItems: "center",
+                py: 2,
               }}
             >
-              Let's Talk
-            </Button>
-          </HashLink>
-        </Stack>
+              <HashLink
+                onClick={toggleMenu}
+                smooth
+                to="/#landing"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <StyledButton>Home</StyledButton>
+              </HashLink>
+              <HashLink
+                onClick={toggleMenu}
+                smooth
+                to="/about"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <StyledButton>About</StyledButton>
+              </HashLink>
+              <HashLink
+                onClick={toggleMenu}
+                smooth
+                to="/#services"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <StyledButton>Services</StyledButton>
+              </HashLink>
+              <HashLink
+                onClick={toggleMenu}
+                smooth
+                to="/#letstalk"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <StyledButton>Let's Talk</StyledButton>
+              </HashLink>
+            </Stack>
+          </Box>
+        )}
       </Toolbar>
     </AppBar>
   );
