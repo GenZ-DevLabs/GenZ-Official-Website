@@ -8,22 +8,22 @@ import img_Sachitha_Jayasinghe from "../assets/sachithaJayasinghe.jpg";
 const cardDetails = [
   {
     avatar: img_Janindu_Kulathilaka,
-    post: "Chief Executive Officer",
+    post: "Co-Founder",
     name: "Janindu Kulathilaka",
   },
   {
     avatar: img_Chathumi_Fernando,
-    post: "Chief Operations Officer",
+    post: "Co-Founder",
     name: "Chathumi Fernando",
   },
   {
     avatar: img_Mindula_Madhuhansa,
-    post: "Chief Technical Officer",
+    post: "Co-Founder",
     name: "Mindula Madhuhansa",
   },
   {
     avatar: img_Sachitha_Jayasinghe,
-    post: "Cheif Information Officer",
+    post: "Co-Founder",
     name: "Sachitha Jayasinghe",
   },
 ];
