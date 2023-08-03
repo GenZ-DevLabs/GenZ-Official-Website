@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Grid,
   Stack,
@@ -100,7 +100,10 @@ const ServicesSection = () => {
                     width: "300px",
                     borderRadius: "16px",
                     backgroundColor: "#1E1D1D",
-                    "&:hover": { cursor: "pointer" },
+                    transition: "transform 0.2s ease",
+                    "&:hover": {
+                      transform: "translateY(20px)",
+                    },
                   }}
                 >
                   <CardContent>

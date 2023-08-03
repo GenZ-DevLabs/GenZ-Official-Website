@@ -2,6 +2,8 @@ import React from "react";
 import { Stack, Typography, Button, Grid } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 import { HashLink } from "react-router-hash-link";
+import BackgroundAnimation from "./BackgroundAnimation";
+import "./Home.css";
 
 const LandingSection = () => {
   return (
@@ -9,14 +11,17 @@ const LandingSection = () => {
       <Grid
         container
         spacing={2}
-        paddingLeft={{ xs: "80px", md: "100px" }}
+        paddingLeft={{ xs: "40px", md: "100px" }}
         minHeight={{ xs: "100vh", md: "100vh" }}
         display="flex"
         alignItems="center"
         justifyContent="left"
-        sx={{ backgroundColor: "#121212" }}
+        sx={{
+          backgroundColor: "#121212",
+        }}
       >
-        <Stack spacing={2}>
+        <BackgroundAnimation />
+        <Stack spacing={2} sx={{ zIndex: 4 }}>
           <Stack>
             <Typography
               sx={{
@@ -87,7 +92,7 @@ const LandingSection = () => {
                 variant="contained"
                 disableRipple
                 sx={{
-                  width: { xs: "130px", md: "172px" },
+                  width: { xs: "135px", md: "172px" },
                   height: { xs: "30px", md: "40px" },
                   fontSize: { xs: "16px", md: "20px" },
                   fontWeight: "500",
