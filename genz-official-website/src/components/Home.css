@@ -1,0 +1,87 @@
+/* BackgroundAnimation.css */
+.bgAnimation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            background: #121212;
+            filter: saturate(2);
+            overflow: hidden;
+          }
+          
+          .colorBox {
+            z-index: 2;
+            filter: brightness(1.1);
+            transition: 2s ease;
+            position: relative;
+            margin: 2px;
+            background: #121212;
+          }
+          
+          .backgroundAmim {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: #00ffff;
+            filter: blur(60px);
+            animation: animBack 6s linear infinite;
+          }
+          
+          @keyframes animBack {
+            0% {
+              top: -60px;
+            }
+            100% {
+              top: 120%;
+            }
+          }
+          /* BackgroundAnimation.css */
+.bgAnimation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            background: #121212;
+            filter: saturate(2);
+            overflow: hidden;
+          }
+          
+          .colorBox {
+            z-index: 2;
+            filter: brightness(1.1);
+            transition: 2s ease;
+            position: relative;
+            margin: 2px;
+            background: #121212;
+          }
+          
+          .backgroundAmim {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: #00ffff;
+            filter: blur(60px);
+            animation: animBack 6s linear infinite;
+          }
+          
+          @keyframes animBack {
+            0% {
+              top: -60px;
+            }
+            100% {
+              top: 120%;
+            }
+          }
+          
