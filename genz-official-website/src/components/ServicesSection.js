@@ -36,7 +36,7 @@ const cardDetails = [
   },
   {
     avatar: Software,
-    title: "Software<br/>Solutions",
+    title: "Software<br/>Development",
     content:
       "Designed to address specific problems or tasks, streamlining processes and enhancing efficiency across various industries and various users.",
   },
