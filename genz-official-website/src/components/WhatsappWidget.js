@@ -16,7 +16,7 @@ export default function WhatsappWidget() {
       }}
     >
       <Link
-        href="https://wa.me/94701765144"
+        href="https://wa.me/94740412139"
         target="_blank"
         rel="noreferrer"
         underline="none"
