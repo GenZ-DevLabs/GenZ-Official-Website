@@ -19,18 +19,25 @@ const cardDetails = [
     avatar: Code,
     title: "Web Applications Development",
     content:
-      "ReactJS, Angular, HTML, CSS, JavaScript, Bootstrap, Material UI, Django, MongoDB, Java, etc.",
+      "Combines aesthetics and functionality to craft visually appealing and intuitive digital interfaces, enhancing user satisfaction and engagement.",
   },
   {
     avatar: Phone,
     title: "Mobile Applications Development",
-    content: "React Native, Flutter, Dart, Java, Python etc.",
+    content:
+      "Offering interactive and dynamic functionality for various online tasks, from social networking to productivity tools for the users.",
   },
   {
     avatar: Brush,
     title: "UI/UX<br/>Design",
     content:
-      "Using Figma and Adobe XD to Draw Wireframes and design UI/UX Designs",
+      "Offering diverse features and services that cater to users' needs and preferences, spanning entertainment, productivity, and more.",
+  },
+  {
+    avatar: Brush,
+    title: "Software Solutions",
+    content:
+      "Designed to address specific problems or tasks, streamlining processes and enhancing efficiency across various industries and various users.",
   },
 ];
 
