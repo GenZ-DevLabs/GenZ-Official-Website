@@ -13,6 +13,7 @@ import {
 import Code from "../assets/code.png";
 import Phone from "../assets/phone.png";
 import Brush from "../assets/brush.png";
+import Software from "../assets/software.png";
 
 const cardDetails = [
   {
@@ -34,7 +35,7 @@ const cardDetails = [
       "Offering diverse features and services that cater to users' needs and preferences, spanning entertainment, productivity, and more.",
   },
   {
-    avatar: Brush,
+    avatar: Software,
     title: "Software<br/>Solutions",
     content:
       "Designed to address specific problems or tasks, streamlining processes and enhancing efficiency across various industries and various users.",
