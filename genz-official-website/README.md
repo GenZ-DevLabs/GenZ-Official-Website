@@ -1,72 +1,67 @@
-# Getting Started with Create React App
+# GenZ DevLabs — marketing site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Next.js 14 (App Router) + TypeScript + Tailwind CSS implementation of the
+[GenZ Website Figma home page](https://www.figma.com/design/1WCYBq7CgJ1IiuYT341WBj/Genz-Website?node-id=360-889).
 
-## Add this libraries before run
+## Run it
 
-## Available Scripts
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm start
+```
 
-In the project directory, you can run:
+## Layout of the code
 
-### `npm start`
+```
+app/
+  layout.tsx        root shell, metadata, Google Fonts (Poppins + Inter)
+  page.tsx          composes the eight sections
+  globals.css       Tailwind layers + .shell page gutter
+components/
+  sections/         Navbar, Hero, Services, Projects, WhyChooseUs,
+                    TechStack, Contact, Footer  — one per Figma frame
+  ui/               GradientButton / OutlineButton, SectionHeading, LearnMore
+  icons/            Logo, ServiceIcons, MiscIcons, Decor — all inline SVG
+lib/content.ts      every string, project, service and tech-logo entry
+public/assets/      the six raster images (see that folder's README)
+tailwind.config.ts  design tokens transcribed from Figma
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**All copy lives in `lib/content.ts`** — change it there, not in the components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design tokens
 
-### `npm test`
+| Token | Value | Where it comes from |
+|---|---|---|
+| `brand-cyan` | `#05BEDD` | accent word in every heading |
+| `brand-blue` | `#3294F4` | gradient terminus |
+| `brand-sky` | `#34AAFF` | "See Our Works" border |
+| `brand-teal` | `#6ECDDD` | nav underline |
+| `ink` | `#2D2D2D` | hero headline |
+| `muted` | `#808080` | body copy |
+| `bg-brand-gradient` | `linear-gradient(259.23deg, #3294F4 15.65%, #05BEDD 90.47%)` | every filled CTA |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Figma exposed no published variables for this file, so these are transcribed
+from the raw fills and live only in `tailwind.config.ts`.
 
-### `npm run build`
+## Fidelity notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The desktop layouts for **Our Services** and **Our Projects** reproduce the
+  Figma's staggered / collage geometry at exact pixel offsets above `lg`.
+  Below `lg` they fall back to a plain responsive grid, which the Figma doesn't
+  specify.
+- Every icon, decorative shape and the GZ monogram is **hand-authored inline
+  SVG** in `components/icons/`. Tech-cloud logos come from the `simple-icons`
+  package.
+- Six raster images are placeholders — see `public/assets/README.md` for the
+  Figma node to export for each.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Still to wire up
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `components/sections/Contact.tsx` currently fakes submission. Point the
+  `onSubmit` handler at your form endpoint (Formspree, Resend, a route handler…).
+- Nav, footer and "Learn more" links are in-page anchors. Give projects and
+  services real routes when those pages exist.
+- Social URLs in `lib/content.ts` are placeholders.
