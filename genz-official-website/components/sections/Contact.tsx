@@ -60,13 +60,13 @@ export function Contact() {
           <h2 className="text-[clamp(2.5rem,1.7rem+3vw,4.5rem)] font-bold tracking-[-0.02em] text-black">
             Let&rsquo;s <span className="text-brand-cyan">Talk</span>
           </h2>
-          <div className="relative mt-8 aspect-[568/556] w-full overflow-hidden rounded-card bg-gradient-to-br from-[#EAF4FE] to-[#DCEBFA]">
+          <div className="relative mt-8 aspect-[568/556] w-full">
             <Image
               src="/assets/contact-illustration.png"
               alt="A GenZ DevLabs support engineer taking a call"
               fill
               sizes="(max-width: 1024px) 100vw, 568px"
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         </div>

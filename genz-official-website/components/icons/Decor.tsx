@@ -84,38 +84,6 @@ export function RibbonStripes({ className = "" }: { className?: string }) {
   );
 }
 
-/** Soft gradient blob used behind the hero */
-export function HeroBlob({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 900 900" aria-hidden="true" className={className}>
-      <defs>
-        <linearGradient id="blob" x1="0.15" y1="0" x2="0.9" y2="1">
-          <stop offset="0%" stopColor="#4FC8F5" />
-          <stop offset="55%" stopColor="#1E86F0" />
-          <stop offset="100%" stopColor="#0A6FE0" />
-        </linearGradient>
-        <linearGradient id="blobLight" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#ffffff" stopOpacity=".55" />
-          <stop offset="100%" stopColor="#ffffff" stopOpacity=".15" />
-        </linearGradient>
-      </defs>
-      <circle cx="450" cy="450" r="440" fill="url(#blob)" />
-      {/* white slash */}
-      <path
-        d="M120 830 830 120l58 58L178 888z"
-        fill="#fff"
-        opacity=".95"
-      />
-      {/* rounded capsules echoing the Figma artwork */}
-      <g fill="url(#blobLight)">
-        <rect x="330" y="150" width="230" height="120" rx="60" transform="rotate(-45 445 210)" />
-        <rect x="540" y="470" width="230" height="120" rx="60" transform="rotate(-45 655 530)" />
-        <rect x="180" y="430" width="170" height="110" rx="55" transform="rotate(-45 265 485)" />
-      </g>
-    </svg>
-  );
-}
-
 /** The floating gradient dots on the hero */
 export function Dot({
   size,
