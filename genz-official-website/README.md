@@ -57,11 +57,10 @@ from the raw fills and live only in `tailwind.config.ts`.
   Figma's staggered / collage geometry at exact pixel offsets above `lg`.
   Below `lg` they fall back to a plain responsive grid, which the Figma doesn't
   specify.
-- Every icon, decorative shape and the GZ monogram is **hand-authored inline
-  SVG** in `components/icons/`. Tech-cloud logos come from the `simple-icons`
-  package.
-- Six raster images are placeholders — see `public/assets/README.md` for the
-  Figma node to export for each.
+- Icons and decorative shapes are **hand-authored inline SVG** in
+  `components/icons/`. Tech-cloud logos come from the `simple-icons` package.
+- All raster artwork (logo, hero shape, project thumbnails, contact
+  illustration) is the real Figma export — see `public/assets/README.md`.
 
 ## Still to wire up
 

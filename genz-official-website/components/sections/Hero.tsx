@@ -1,4 +1,5 @@
-import { Dot, HeroBlob } from "@/components/icons/Decor";
+import Image from "next/image";
+import { Dot } from "@/components/icons/Decor";
 import { GradientButton, OutlineButton } from "@/components/ui/GradientButton";
 
 export function Hero() {
@@ -7,18 +8,31 @@ export function Hero() {
       id="home"
       className="relative overflow-hidden bg-white pb-16 pt-[110px] lg:pb-[100px] lg:pt-[160px]"
     >
-      {/* ---- artwork ---- */}
+      {/* ---- artwork (Figma "header shape", node 360:904) ---- */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[-22%] top-[-30%] hidden h-[1100px] w-[1100px] rotate-[5.2deg] lg:block xl:right-[-14%]"
+        className="pointer-events-none absolute right-[-16%] top-[-26%] hidden h-[1180px] w-[1050px] lg:block xl:right-[-8%]"
       >
-        <HeroBlob className="h-full w-full" />
+        <Image
+          src="/assets/hero-shape.png"
+          alt=""
+          fill
+          sizes="1050px"
+          priority
+          className="object-contain"
+        />
       </div>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-0 mx-auto h-[420px] max-w-[520px] opacity-90 lg:hidden"
+        className="pointer-events-none absolute -right-24 -top-16 h-[380px] w-[340px] opacity-70 lg:hidden"
       >
-        <HeroBlob className="h-full w-full" />
+        <Image
+          src="/assets/hero-shape.png"
+          alt=""
+          fill
+          sizes="340px"
+          className="object-contain"
+        />
       </div>
 
       {/* ---- floating dots ---- */}

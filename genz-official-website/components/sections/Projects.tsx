@@ -5,29 +5,25 @@ import { PROJECTS } from "@/lib/content";
 
 type Project = (typeof PROJECTS)[number];
 
+/**
+ * The Figma exports already carry their own rounded corners and drop shadow
+ * inside a transparent 388x388 bleed, so this renders them bare — no extra
+ * radius, background or shadow, or you get the treatment twice.
+ */
 function Thumb({
   src,
   alt,
   className = "",
+  sizes = "388px",
 }: {
   src: string;
   alt: string;
   className?: string;
+  sizes?: string;
 }) {
   return (
-    <div
-      className={
-        "relative overflow-hidden rounded-card bg-gradient-to-br from-[#EAF6FD] to-[#DCEBFA] shadow-thumb " +
-        className
-      }
-    >
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        sizes="316px"
-        className="object-cover"
-      />
+    <div className={"relative " + className}>
+      <Image src={src} alt={alt} fill sizes={sizes} className="object-contain" />
     </div>
   );
 }
@@ -47,13 +43,13 @@ function HorizontalCard({
           side === "left" ? "right-0" : "left-0"
         }`}
       />
-      <div
-        className={`absolute top-[37px] h-[316px] w-[316px] ${
-          side === "left" ? "left-0" : "right-0"
+      <Thumb
+        src={project.image}
+        alt={`${project.title} preview`}
+        className={`absolute top-[1px] h-[388px] w-[388px] ${
+          side === "left" ? "left-[-36px]" : "left-[468px]"
         }`}
-      >
-        <Thumb src={project.image} alt={`${project.title} preview`} className="h-full w-full" />
-      </div>
+      />
       <div
         className={`absolute top-0 flex h-full w-[404px] flex-col items-center justify-center px-4 text-center ${
           side === "left" ? "right-[56px]" : "left-[56px]"
@@ -81,9 +77,11 @@ function VerticalCard({ project }: { project: Project }) {
   return (
     <article className="group relative h-[820px] w-[389px]">
       <div className="absolute left-0 top-[110px] h-[710px] w-full rounded-card bg-white shadow-card" />
-      <div className="absolute left-[38px] top-0 h-[316px] w-[316px]">
-        <Thumb src={project.image} alt={`${project.title} preview`} className="h-full w-full" />
-      </div>
+      <Thumb
+        src={project.image}
+        alt={`${project.title} preview`}
+        className="absolute left-[2px] top-[-36px] h-[388px] w-[388px]"
+      />
       <div className="absolute inset-x-0 top-[366px] flex flex-col items-center px-[38px] text-center">
         <h3 className="text-[2rem] font-semibold leading-[1.42] text-black">
           {project.title}
@@ -106,13 +104,12 @@ function VerticalCard({ project }: { project: Project }) {
 function StackedCard({ project }: { project: Project }) {
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-card bg-white shadow-card">
-      <div className="relative aspect-[4/3] w-full">
-        <Thumb
-          src={project.image}
-          alt={`${project.title} preview`}
-          className="h-full w-full rounded-none shadow-none"
-        />
-      </div>
+      <Thumb
+        src={project.image}
+        alt={`${project.title} preview`}
+        sizes="(max-width: 640px) 100vw, 45vw"
+        className="aspect-square w-full"
+      />
       <div className="flex flex-1 flex-col items-center p-8 text-center">
         <h3 className="text-2xl font-semibold text-black">{project.title}</h3>
         <p className="mt-4 text-base font-medium leading-[1.45] text-muted">
@@ -151,15 +148,12 @@ export function Projects() {
         </div>
 
         {/* centre showcase image */}
-        <div className="absolute left-[440px] top-[433px] z-10 h-[412px] w-[420px] overflow-hidden rounded-card shadow-thumb">
-          <Image
-            src="/assets/project-showcase.png"
-            alt="GenZ DevLabs project showcase"
-            fill
-            sizes="420px"
-            className="object-cover"
-          />
-        </div>
+        <Thumb
+          src="/assets/project-showcase.png"
+          alt="GenZ DevLabs project showcase"
+          sizes="470px"
+          className="absolute left-[415px] top-[421px] z-10 h-[470px] w-[470px]"
+        />
 
         <div className="absolute left-0 top-[459px] z-10">
           <VerticalCard project={carsaleLeft} />
