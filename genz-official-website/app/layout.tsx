@@ -25,7 +25,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "GenZ DevLabs",
   },
-  icons: { icon: "/favicon.svg" },
+  // basePath is not applied to metadata icons on a static export
+  icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon.svg` },
 };
 
 export default function RootLayout({

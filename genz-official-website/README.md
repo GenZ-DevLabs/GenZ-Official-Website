@@ -62,6 +62,27 @@ from the raw fills and live only in `tailwind.config.ts`.
 - All raster artwork (logo, hero shape, project thumbnails, contact
   illustration) is the real Figma export — see `public/assets/README.md`.
 
+## Deploying to GitHub Pages
+
+The site is a **static export** (`output: 'export'` in `next.config.mjs`), which
+is why `next start` no longer works — preview a build with `npx serve out`.
+
+`deploy/github-pages.yml` belongs at `.github/workflows/deploy-pages.yml` in the
+**repository root** (the push script puts it there). One-time setup: repo
+**Settings -> Pages -> Source: GitHub Actions**. Every push to `main` that
+touches this folder redeploys.
+
+Lives at `https://genz-devlabs.github.io/GenZ-Official-Website/`, so the export
+is built with `NEXT_PUBLIC_BASE_PATH=/GenZ-Official-Website`. Two things depend
+on that variable and would silently 404 without it:
+
+- `image-loader.js` — a custom `next/image` loader, because a static export does
+  not prefix `basePath` onto image sources
+- the favicon in `app/layout.tsx`
+
+**Custom domain:** set `BASE_PATH: ''` in the workflow and add a `CNAME` file to
+`public/`.
+
 ## Still to wire up
 
 - `components/sections/Contact.tsx` currently fakes submission. Point the
