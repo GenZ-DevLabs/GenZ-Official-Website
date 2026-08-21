@@ -1,16 +1,21 @@
 # GenZ DevLabs — marketing site
 
-Next.js 14 (App Router) + TypeScript + Tailwind CSS implementation of the
+Next.js 16 (App Router, Turbopack) + React 19 + TypeScript + Tailwind CSS implementation of the
 [GenZ Website Figma home page](https://www.figma.com/design/1WCYBq7CgJ1IiuYT341WBj/Genz-Website?node-id=360-889).
 
 ## Run it
 
+Requires **Node 20.9+** (Next 16 minimum).
+
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # production build
+npm run build    # production build (Turbopack)
 npm start
 ```
+
+> `next lint` was removed in Next 16, so there is no `lint` script. Add ESLint
+> directly (`npm i -D eslint eslint-config-next` + `npx eslint .`) if you want it.
 
 ## Layout of the code
 
