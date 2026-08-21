@@ -28,3 +28,4 @@ yarn-error.log*
 
 # local scratch
 _to_delete/
+push-to-github.ps1
